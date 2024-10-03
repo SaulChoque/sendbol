@@ -1,0 +1,19 @@
+h1 {
+    color: #000000;
+    font-size: 5em;
+    text-align: left;
+    font-family: 'Opificio';
+  }
+
+  .body {
+    display: flex;
+    
+    background-color: #eff3f4;  
+  
+  }
+  .title{
+    padding-right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
