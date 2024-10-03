@@ -22,3 +22,5 @@ export class Scr1Component {
     console.log(this.constantes.IMGBAN001);
   }
 }
+
+//ng build --configuration -production --base-href https://SaulChoque.github.io/sendbol/
