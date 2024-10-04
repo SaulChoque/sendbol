@@ -41,7 +41,7 @@
               "node_modules/@popperjs/core/dist/umd/popper-base.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "node_modules/aos/dist/aos.js"
-              
+
             ],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -54,7 +54,11 @@
               "budgets": [
                 {
                   "type": "initial",
+<<<<<<< Updated upstream
                   "maximumWarning": "4MB",
+=======
+                  "maximumWarning": "3MB",
+>>>>>>> Stashed changes
                   "maximumError": "5MB"
                 },
                 {
@@ -108,6 +112,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
