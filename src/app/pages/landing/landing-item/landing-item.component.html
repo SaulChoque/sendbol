@@ -1,0 +1,79 @@
+<!-- [src]="constantes.IMGBAN001"src="./assets/aa.png"-->
+
+
+
+ <!-- CMMT EXPLN XSMALL -->
+@if(currentBreakpoint == "(max-width: 599.98px)"){
+    <div 
+    id="b1"
+    data-aos="fade-up" 
+    class="body"
+    >
+        <div>
+          <p-image
+          [src]="item?.imgsrc"
+          [preview]="false"
+          alt="Image"
+          [width]="currentWidth">
+            <ng-template pTemplate="indicator">
+              <i class="pi pi-check"></i>
+            </ng-template>
+          </p-image>
+        </div>
+        <div 
+        class="title"
+        >
+            <h1
+            [style.font-size]="fontSize"
+            >
+                {{item?.descripcion}}
+            </h1>
+    
+            @if(item?.button) {
+              <button mat-fab extended>
+                <mat-icon>favorite</mat-icon>
+                  {{item?.buttonName}}
+              </button>
+            }
+        </div>
+    </div>
+}
+@else {
+    <div data-aos="fade-up" class="body">
+        <div class="title">
+   
+        <h1
+        [style.font-size]="fontSize"
+        >
+            {{item?.descripcion}}
+
+        </h1>
+
+        @if(item?.button) {
+          <button mat-fab extended>
+            <mat-icon>favorite</mat-icon>
+              {{item?.buttonName}}
+          </button>
+        }
+    </div>
+    
+    <div 
+    [style.text-align]="item?.orientacion"
+    >
+      <p-image
+      [src]="item?.imgsrc"
+      [preview]="false"
+      alt="Image"
+      [width]="currentWidth">
+        <ng-template pTemplate="indicator">
+          <i class="pi pi-check"></i>
+        </ng-template>
+      </p-image>
+    </div>
+
+    {{currentWidth}}
+
+</div>
+    }
+  
+  
