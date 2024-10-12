@@ -98,6 +98,21 @@
     <!--CMMT cambiaforma -->
     <!--CMMT EXPLN Cuando la ruta es /home, Angular renderizará HomeComponent dentro de <router-outlet>. Si la ruta cambia a /about, AboutComponent se renderizará en su lugar. -->
     <router-outlet></router-outlet>
+
+
+    <!--CMMT EXPLN Estructura switch para Breakpoints-->
+    <div class="container" [ngSwitch]="currentBreakpoint">
+      <span class="large" *ngSwitchCase="Breakpoints.Large"> Large </span>
+      
+      <span class="medium" *ngSwitchCase="Breakpoints.Medium"> Medium </span>
+      
+      <span class="small" *ngSwitchCase="Breakpoints.Small"> Small </span>
+      
+      <span class="custom" *ngSwitchCase="'(min-width: 500px)'"> Custom </span>
+        pppp
+      {{currentBreakpoint}}
+    </div>
+    
   </main>
 
   <footer>
