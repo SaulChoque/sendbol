@@ -1,30 +1,11 @@
-import { Component, OnInit} from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
+import { Injectable } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { distinctUntilChanged, tap } from 'rxjs';
 
-//CMMT EXPLN 1: Importar los componentes que se van a usar en el template
-import { landingItem } from './models/landingItem';
-import { Images } from './models/constants';
-
-
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterLink, RouterOutlet,
-    MatFormFieldModule, MatIconModule, MatInputModule,
-    MatButtonModule, MatMenuModule],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Injectable({
+  providedIn: 'root',
 })
-export class AppComponent implements OnInit{
-
+export class MediaQueryService {
   Breakpoints = Breakpoints;
   currentBreakpoint: string = '';
   widths: string[] = []; // Vector de widths para cada situación
@@ -36,12 +17,8 @@ export class AppComponent implements OnInit{
       distinctUntilChanged()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
-  ngOnInit(): void {
-    this.breakpoint$.subscribe(() => 
-      this.breakpointChanged()
-    );  
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.breakpoint$.subscribe(() => this.breakpointChanged());
   }
 
   private breakpointChanged() {
@@ -57,14 +34,19 @@ export class AppComponent implements OnInit{
     } else if (this.breakpointObserver.isMatched('(min-width: 500px)')) {
       this.currentBreakpoint = '(min-width: 500px)';
       this.widths = ['500px', '600px', '700px']; // Ejemplo de widths para min-width: 500px
+    } else if (this.breakpointObserver.isMatched(Breakpoints.XSmall)) {
+      this.currentBreakpoint = Breakpoints.XSmall;
+      this.widths = ['300px', '400px', '500px']; // Ejemplo de widths para Small
     }
   }
 
-
+  returnWidth() {
+    console.log("Width: " + this.widths[0]);
+    return this.widths[0];
+  }
   
-
-
-  title = 'angular-routing';
-  footerUrl = 'https://www.ganatan.com';
-  footerLink = 'www.ganatan.com';
+  returnBreakpoint(){
+    console.log("Breakpoint: " + this.currentBreakpoint);
+    return this.currentBreakpoint;
+  }
 }

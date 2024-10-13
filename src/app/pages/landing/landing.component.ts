@@ -1,16 +1,25 @@
 import { Component } from '@angular/core';
-import { Scr1Component } from './screens/scr1/scr1.component';
-import { Scr2Component } from './screens/scr2/scr2.component';
-import { Scr3Component } from './screens/scr3/scr3.component';
-
+import { landingItem } from '../../models/landingItem';
+import { MediaQueryService } from '../../services/media-query.service';
+import { LandingItemComponent } from "./landing-item/landing-item.component";
+import { LANDINGITEMS } from '../../models/constants';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [Scr1Component, Scr2Component, Scr3Component],
+  imports: [LandingComponent, LandingItemComponent],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })
 export class LandingComponent {
+  
+  landingintems = [...LANDINGITEMS];
 
+
+
+  #mediaQueryService: MediaQueryService;
+
+  constructor(mediaQueryService: MediaQueryService) {
+    this.#mediaQueryService = mediaQueryService;
+  }
 }
