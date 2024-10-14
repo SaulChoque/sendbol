@@ -39,9 +39,9 @@ export class AppComponent implements OnInit{
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
-    this.breakpoint$.subscribe(() => 
+    this.breakpoint$.subscribe(() =>
       this.breakpointChanged()
-    );  
+    );
   }
 
   private breakpointChanged() {
@@ -61,7 +61,7 @@ export class AppComponent implements OnInit{
   }
 
 
-  
+
 
 
   title = 'angular-routing';

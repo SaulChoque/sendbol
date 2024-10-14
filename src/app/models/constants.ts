@@ -12,13 +12,17 @@ export const Images = {
   //icon: require('../../assets/images/icon.png'),
 };
 
+export const SizesConstants = {
+  LANDINGIMAGES: ['400px', '600px', '600px'],
+};
+
 export const LANDINGITEMS: landingItem[] = [
   {
     descripcion: 'ENVIA TUS PAQUETES DESDE ESTADOS UNIDOS A BOLIVIA',
     imgsrc: Images.IMGBAN001,
     orientacion: 'right',
     button: true,
-    buttonName: 'Llevame alla',  
+    buttonName: 'Llevame alla',
     buttonLink: '',
   },
   {
@@ -26,7 +30,7 @@ export const LANDINGITEMS: landingItem[] = [
     imgsrc: Images.IMGBAN002,
     orientacion: 'left',
     button: false,
-    buttonName: 'Llevame alla',  
+    buttonName: 'Llevame alla',
     buttonLink: '',
   },
   {
@@ -34,7 +38,7 @@ export const LANDINGITEMS: landingItem[] = [
     imgsrc: Images.IMGBAN002,
     orientacion: 'left',
     button: false,
-    buttonName: 'Llevame alla',  
+    buttonName: 'Llevame alla',
     buttonLink: '',
   },
 ];

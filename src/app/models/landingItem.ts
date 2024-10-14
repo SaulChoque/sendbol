@@ -4,7 +4,7 @@ export class landingItem {
         public imgsrc: string,
         public orientacion: string,
         public button: boolean,
-        public buttonName: string,  
+        public buttonName: string,
         public buttonLink: string,
     ){}
 
