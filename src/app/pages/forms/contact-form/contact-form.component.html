@@ -1,7 +1,7 @@
 <mat-card appearance="outlined">
   <mat-card-header>FORMULARIO</mat-card-header>
   <mat-card-content>
-    <form (ngSubmit)="onSubmit()">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <p>
         <mat-form-field appearance="outline">
           <input matInput placeholder="Nombre" formControlName="nombre">
