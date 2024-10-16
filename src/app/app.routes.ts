@@ -5,8 +5,20 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { ContactFormComponent } from './pages/forms/contact-form/contact-form.component';
 //import { homecomponer } from './pages/general/home/home.component';
 //import { NotFoundComponent } from './pages/general/not-found/not-found.component';
+//import { bootstrapApplication } from '@angular/platform-browser';
 
 export const routes: Routes = [
-  { path: '', component: LandingComponent, },
-  { path: 'cotizacion', component: ContactFormComponent, },
+  { path: '', 
+    component: LandingComponent, 
+    data: { animation: 'LandingPage' }
+  },
+  
+
+  { path: 'cotizacion', 
+    component: ContactFormComponent, 
+    data: { animation: 'ContactPage' }
+  },
+
 ];
+
+

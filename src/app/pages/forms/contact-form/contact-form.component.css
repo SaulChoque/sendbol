@@ -1,0 +1,13 @@
+.formCard{
+    max-width: 450px;
+}
+
+.body{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.formField{
+    width: 350px;;
+}
