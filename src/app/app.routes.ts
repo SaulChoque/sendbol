@@ -8,15 +8,15 @@ import { ContactFormComponent } from './pages/forms/contact-form/contact-form.co
 //import { bootstrapApplication } from '@angular/platform-browser';
 
 export const routes: Routes = [
-  { path: '', 
-    component: LandingComponent, 
-    data: { animation: 'LandingPage' }
-  },
-  
+  { path: '',
+    component: LandingComponent,
 
-  { path: 'cotizacion', 
-    component: ContactFormComponent, 
-    data: { animation: 'ContactPage' }
+  },
+
+
+  { path: 'cotizacion',
+    component: ContactFormComponent,
+
   },
 
 ];

@@ -37,7 +37,7 @@
         </mat-icon>
       </button>
       -->
-      
+
       <!--CMMT TTL Title Button -->
       <a class="navbar-brand"
       href="#"
@@ -45,19 +45,19 @@
       >
       <h4>Sendbol</h4>
     </a>
-    
-    
-    
+
+
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        
+
         <!--CMMT MENU Dropdown-->
         <li class="nav-item">
           <!--
-            
+
           <mat-form-field
           style="width: 60vh;"
           appearance="outline"
@@ -69,8 +69,8 @@
         </mat-form-field>
         -->
       </li>
-      
-      
+
+
     </ul>
     <!--CMMT BAR BarraBusqueda-->
     <li class="nav-item dropdown">
@@ -100,25 +100,26 @@
 <main>
     <!--CMMT cambiaforma -->
     <!--CMMT EXPLN Cuando la ruta es /home, Angular renderizará HomeComponent dentro de <router-outlet>. Si la ruta cambia a /about, AboutComponent se renderizará en su lugar. -->
-    <div [@routeTransition]="route.snapshot.data" style="display: contents;">
+    <div [@routeTransition]="route.snapshot.data" style="display: contents">
 
       <router-outlet></router-outlet>
-      
-    </div>
 
-    <!--CMMT EXPLN Estructura switch para Breakpoints-->
-    <div class="container" [ngSwitch]="currentBreakpoint">
+    </div>
+    <!--
+      CMMT EXPLN Estructura switch para Breakpoints
+      <div class="container" [ngSwitch]="currentBreakpoint">
       <span class="large" *ngSwitchCase="Breakpoints.Large"> Large </span>
-      
+
       <span class="medium" *ngSwitchCase="Breakpoints.Medium"> Medium </span>
-      
+
       <span class="small" *ngSwitchCase="Breakpoints.Small"> Small </span>
-      
+
       <span class="custom" *ngSwitchCase="'(min-width: 500px)'"> Custom </span>
-        pppp
+      pppp
       {{currentBreakpoint}}
     </div>
-    
+  -->
+
   </main>
 
   <footer>

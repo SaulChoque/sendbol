@@ -32,7 +32,7 @@
 
             <!-- CMMT BTN Formulario -->
             @if(item?.button) {
-              <button mat-fab extended (click)="navigateToAnother()">
+              <button mat-fab extended [routerLink]='link'>
                 <mat-icon>favorite</mat-icon>
                   {{item?.buttonName}}
               </button>
@@ -62,7 +62,7 @@
 
 
       @if(item?.button) {
-        <button mat-fab extended (click)="navigateToAnother()">
+        <button mat-fab extended [routerLink]='link'>
           <mat-icon>favorite</mat-icon>
             {{item?.buttonName}}
         </button>

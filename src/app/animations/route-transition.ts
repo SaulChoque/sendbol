@@ -1,17 +1,18 @@
-import 
-{ 
-    trigger, 
-    transition, 
-    query, 
-    style, 
-    animate  
-} 
+import
+{
+    trigger,
+    transition,
+    query,
+    style,
+    animate
+}
 from '@angular/animations';
 
-export const routeTransition = trigger('routeTransition', [
+export const routeTransition =
+trigger('routeTransition', [
     transition('* => *', [
         query(':enter', [
-            style({ opacity: 0, scale: 0.9 }),
+            style({ opacity: 0, scale: 0.4 }),
         ], { optional: true },),
         query(':leave', [
             animate('1s', style({ opacity: 0, scale: 0.9 }))

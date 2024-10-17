@@ -4,8 +4,6 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
-import { bootstrapApplication } from '@angular/platform-browser';
-
 
 
 @Component({
@@ -42,10 +40,6 @@ export class ContactFormComponent {
     });
   }
   ngOnInit(): void {}
-
-
-
-
 
 
   onSubmit(): void {

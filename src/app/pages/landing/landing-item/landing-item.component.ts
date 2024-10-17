@@ -9,14 +9,14 @@ import { SizesConstants } from '../../../models/constants';
 import { landingItem } from '../../../models/landingItem';
 import { MediaQueryService } from '../../../services/media-query.service';
 import { Breakpoints } from '@angular/cdk/layout';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import * as AOS from 'aos';
 
 
 @Component({
   selector: 'app-landing-item',
   standalone: true,
-  imports: [ImageModule, MatIconModule, MatDividerModule, MatButtonModule],
+  imports: [ImageModule, MatIconModule, MatDividerModule, MatButtonModule, RouterModule],
   templateUrl: './landing-item.component.html',
   styleUrl: './landing-item.component.css'
 })
@@ -57,8 +57,10 @@ export class LandingItemComponent {
 
     //console.log(this.constantes.IMGBAN001);
   }
-  navigateToAnother() {
+
+  protected link: string = 'cotizacion';
+  /*navigateToAnother() {
     this.router.navigate(['/cotizacion']);
-  }
+  }*/
 
 }
