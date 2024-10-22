@@ -37,7 +37,7 @@ export class LandingItemComponent {
   breakpoints = Breakpoints;
   currentBreakpoint?: string;
   currentWidth?: string;
-  fontSize = "0px";
+
 
 
 

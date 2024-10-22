@@ -7,3 +7,7 @@ body{
   background-color: #fbf3f0;
 }
 
+.app{
+  display: contents;
+  position: relative;
+}

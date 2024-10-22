@@ -10,13 +10,14 @@ import { ContactFormComponent } from './pages/forms/contact-form/contact-form.co
 export const routes: Routes = [
   { path: '',
     component: LandingComponent,
+    title: 'Inicio',
 
   },
 
 
   { path: 'cotizacion',
     component: ContactFormComponent,
-
+    title: 'Cotización',
   },
 
 ];

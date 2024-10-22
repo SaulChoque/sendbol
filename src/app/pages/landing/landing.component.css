@@ -1,3 +1,9 @@
+:host {
+  position: relative;
+}
+
+
 .body-landing {
   margin: 2%;
 }
+

@@ -40,7 +40,7 @@
 
       <!--CMMT TTL Title Button -->
       <a class="navbar-brand"
-      href="#"
+      routerLink=''
       style="margin: 1vh;"
       >
       <h4>Sendbol</h4>
@@ -100,7 +100,7 @@
 <main>
     <!--CMMT cambiaforma -->
     <!--CMMT EXPLN Cuando la ruta es /home, Angular renderizará HomeComponent dentro de <router-outlet>. Si la ruta cambia a /about, AboutComponent se renderizará en su lugar. -->
-    <div [@routeTransition]="route.snapshot.data" style="display: contents">
+    <div [@routeTransition]="route.snapshot.data" style="display: contents;">
 
       <router-outlet></router-outlet>
 
@@ -122,59 +122,61 @@
 
   </main>
 
-  <footer>
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 m-4 border-top">
-      <div class="col-md-4 d-flex align-items-center">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-          <!--
-          <mat-icon
-          style="font-size: 2rem; height: auto; width: auto; margin: 0; color: black;"
-        >
-          pets
-        </mat-icon>
-        -->
+
+
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 m-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <!--
+        <mat-icon
+        style="font-size: 2rem; height: auto; width: auto; margin: 0; color: black;"
+      >
+        pets
+      </mat-icon>
+      -->
+      </a>
+
+      <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 SendboL</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3">
+        <a class="text-body-secondary" href="#">
+          <button mat-mini-fab
+          aria-label="shopping_cart"
+          class="socialMediaButton">
+            <svg class="bi" width="24" height="24">
+              <use xlink:href="#twitter"/>
+            </svg>
+          </button>
         </a>
-
-        <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 SendboL</span>
-      </div>
-
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3">
-          <a class="text-body-secondary" href="#">
-            <button mat-mini-fab
-            aria-label="shopping_cart"
-            class="socialMediaButton">
-              <svg class="bi" width="24" height="24">
-                <use xlink:href="#twitter"/>
-              </svg>
-            </button>
-          </a>
-        </li>
-        <li class="ms-3">
-          <a class="text-body-secondary" href="#">
-            <button mat-mini-fab
-            aria-label="shopping_cart"
-            class="socialMediaButton">
-              <svg class="bi" width="24" height="24">
-                <use xlink:href="#instagram"/>
-              </svg>
-            </button>
-          </a>
-        </li>
-        <li class="ms-3">
-          <a class="text-body-secondary" href="#">
-            <button mat-mini-fab
-            aria-label="shopping_cart"
-            class="socialMediaButton"
-            >
-              <svg class="bi" width="24" height="24">
-                <use xlink:href="#facebook"/>
-              </svg>
-            </button>
-          </a>
-        </li>
-      </ul>
-    </footer>
+      </li>
+      <li class="ms-3">
+        <a class="text-body-secondary" href="#">
+          <button mat-mini-fab
+          aria-label="shopping_cart"
+          class="socialMediaButton">
+            <svg class="bi" width="24" height="24">
+              <use xlink:href="#instagram"/>
+            </svg>
+          </button>
+        </a>
+      </li>
+      <li class="ms-3">
+        <a class="text-body-secondary" href="#">
+          <button mat-mini-fab
+          aria-label="shopping_cart"
+          class="socialMediaButton"
+          >
+            <svg class="bi" width="24" height="24">
+              <use xlink:href="#facebook"/>
+            </svg>
+          </button>
+        </a>
+      </li>
+    </ul>
   </footer>
+
 
 </div>
