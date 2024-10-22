@@ -5,6 +5,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-contact-form',
   standalone: true,
@@ -39,10 +40,6 @@ export class ContactFormComponent {
     });
   }
   ngOnInit(): void {}
-
-
-
-
 
 
   onSubmit(): void {
