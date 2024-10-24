@@ -105,10 +105,78 @@
       <router-outlet></router-outlet>
 
     </div>
+    <!--
+      CMMT EXPLN Estructura switch para Breakpoints
+      <div class="container" [ngSwitch]="currentBreakpoint">
+      <span class="large" *ngSwitchCase="Breakpoints.Large"> Large </span>
+
+      <span class="medium" *ngSwitchCase="Breakpoints.Medium"> Medium </span>
+
+      <span class="small" *ngSwitchCase="Breakpoints.Small"> Small </span>
+
+      <span class="custom" *ngSwitchCase="'(min-width: 500px)'"> Custom </span>
+      pppp
+      {{currentBreakpoint}}
+    </div>
+  -->
 
   </main>
 
-  <!-- CMMT: Footer -->
-  <app-footer-item></app-footer-item>
+
+
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 m-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <!--
+        <mat-icon
+        style="font-size: 2rem; height: auto; width: auto; margin: 0; color: black;"
+      >
+        pets
+      </mat-icon>
+      -->
+      </a>
+
+      <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 SendboL</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3">
+        <a class="text-body-secondary" href="#">
+          <button mat-mini-fab
+          aria-label="shopping_cart"
+          class="socialMediaButton">
+            <svg class="bi" width="24" height="24">
+              <use xlink:href="#twitter"/>
+            </svg>
+          </button>
+        </a>
+      </li>
+      <li class="ms-3">
+        <a class="text-body-secondary" href="#">
+          <button mat-mini-fab
+          aria-label="shopping_cart"
+          class="socialMediaButton">
+            <svg class="bi" width="24" height="24">
+              <use xlink:href="#instagram"/>
+            </svg>
+          </button>
+        </a>
+      </li>
+      <li class="ms-3">
+        <a class="text-body-secondary" href="#">
+          <button mat-mini-fab
+          aria-label="shopping_cart"
+          class="socialMediaButton"
+          >
+            <svg class="bi" width="24" height="24">
+              <use xlink:href="#facebook"/>
+            </svg>
+          </button>
+        </a>
+      </li>
+    </ul>
+  </footer>
+
 
 </div>

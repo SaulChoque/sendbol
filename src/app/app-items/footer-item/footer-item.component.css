@@ -1,0 +1,12 @@
+h4{
+  font-family: 'Typo-hoop';
+  font-size: 2em;
+  margin: 15px;
+}
+.text-body-secondary {
+  display: block;
+  margin-bottom: 0.5rem; /* Ajusta el margen según sea necesario */
+}
+.ms-3 {
+  display: block
+}
