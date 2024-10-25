@@ -92,3 +92,4 @@ export const SVGS: svgs[] = [
 ];
 //src\assets\images\pages\landing\scr1.png
 
+

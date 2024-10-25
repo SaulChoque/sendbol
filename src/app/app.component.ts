@@ -17,6 +17,7 @@ import { ActivatedRoute } from '@angular/router';
 
 //CMMT: Importacion de componentes
 import { FooterItemComponent } from './app-items/footer-item/footer-item.component';
+import { NavItemComponent } from './app-items/nav-item/nav-item.component';
 
 import
 {
@@ -30,7 +31,8 @@ from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterLink, RouterOutlet,
     MatFormFieldModule, MatIconModule, MatInputModule,
-    MatButtonModule, MatMenuModule, FooterItemComponent],
+    MatButtonModule, MatMenuModule, FooterItemComponent,
+    NavItemComponent],
   animations: [routeTransition],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
