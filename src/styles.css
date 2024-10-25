@@ -22,12 +22,8 @@
 
 }
 :host {
-  display: block;
-  position: relative;
-}
+  display: flex;
 
-.router-outlet + .router-outlet {
-  display: none;
 }
 
 html, body {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -7,6 +7,11 @@ import {MatListModule} from '@angular/material/list';
 //CMMT: Importacion de constantes
 import { SVGS } from '../../models/constants';
 import { SOCIALMEDIA } from '../../models/constants';
+
+
+//CMMT: Importacion de servicios
+import { MediaQueryService } from '../../services/media-query.service';
+import { Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-footer-item',
@@ -17,5 +22,30 @@ import { SOCIALMEDIA } from '../../models/constants';
 })
 export class FooterItemComponent {
   svgs = [...SVGS];
+
   socialmedia = [...SOCIALMEDIA];
+  constructor(
+    private mediaQueryService: MediaQueryService,
+  ) {}
+
+  @Input()
+  breakpoints = Breakpoints;
+  currentBreakpoint?: string;
+  currentWidth?: string;
+
+
+  ngOnInit() {
+
+    this.mediaQueryService.breakpoint$.subscribe(() => {
+      this.mediaQueryService.triggerProcesses();
+      this.currentBreakpoint = this.mediaQueryService.returnBreakpoint();
+    });
+
+
+    this.currentWidth = this.mediaQueryService.returnWidth();
+
+
+    //console.log(this.constantes.IMGBAN001);
+  }
+
 }

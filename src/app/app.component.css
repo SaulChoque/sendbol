@@ -1,13 +1,11 @@
 h4{
   font-family: 'Typo-hoop';
   font-size: 2em;
-  margin: 15px;
 }
 body{
   background-color: #fbf3f0;
 }
 
-.app{
-  display: contents;
-  position: relative;
-}
+
+/* src/app/app.component.css */
+/* src/app/app-items/footer-item/footer-item.component.css */
