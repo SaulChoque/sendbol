@@ -1,0 +1,34 @@
+
+
+  <mat-tree #tree [dataSource]="articulo.subtitulos" [childrenAccessor]="childrenAccessor">
+    <!-- This is the tree node template for leaf nodes -->
+
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+      <!-- use a disabled button to provide padding for tree leaf -->
+
+      <button mat-icon-button disabled></button>
+
+      <p-button label="{{node.titulo}}" [text]="true" [plain]="true" (onClick)="handleClick(node)"/>
+
+    </mat-tree-node>
+
+    <!-- This is the tree node template for expandable nodes -->
+    <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding matTreeNodeToggle
+                  [cdkTreeNodeTypeaheadLabel]="node.titulo">
+
+      <button mat-icon-button matTreeNodeToggle
+              [attr.aria-label]="'Toggle ' + node.titulo">
+
+        <mat-icon class="mat-icon-rtl-mirror">
+          {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+
+        </mat-icon>
+
+      </button>
+
+      <p-button label="{{node.titulo}}" [text]="true" [plain]="true" (onClick)="handleClick(node)"/>
+
+    </mat-tree-node>
+
+  </mat-tree>
+

@@ -6,6 +6,9 @@
 import { landingItem } from './landingItem';
 import { SocialMedia } from './socialmedia';
 import { svgs } from './svgs';
+import { Article } from './article';
+
+
 export const Images = {
   //logo: require('../../assets/images/logo.png'),
   IMGBAN001: './assets/images/pages/landing/scr1.png',
@@ -23,6 +26,244 @@ INSTAGRAM: 'https://www.instagram.com/sendbol_express/',
 
 TWITTER: 'twitter',
 */
+export const ARTICLES: Article[] = [
+  {
+    titulo: 'Términos y Condiciones sendbol',
+    contenido: '',
+    subtitulos: [
+      {
+        titulo: '1. Aceptación de los Términos',
+        contenido: 'Al utilizar los servicios de sendbol, usted acepta cumplir con estos términos y condiciones. Si no está de acuerdo con alguno de los términos, no debe utilizar nuestros servicios.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '2. Descripción del Servicio',
+        contenido: 'sendbol ofrece servicios de empaquetaría y envío desde Estados Unidos a Bolivia. El cliente contrata nuestros servicios para gestionar el envío de paquetes, realizar el seguimiento y asegurar que lleguen a su destino en las mejores condiciones posibles.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '3. Responsabilidades del Cliente',
+        contenido: 'Precisión de la información: El cliente es responsable de proporcionar información completa y precisa para el envío, incluyendo dirección de entrega, peso y contenido del paquete. Pago de tarifas: El cliente debe pagar las tarifas correspondientes antes de que se procesen los envíos. Las tarifas incluyen costos de envío, impuestos y tarifas aduaneras según sea necesario.Cumplimiento con la ley: El cliente debe asegurarse de que los productos enviados cumplen con las leyes de importación y exportación de ambos países.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '4. Responsabilidades de sendbol',
+        contenido: 'Transporte: Nos comprometemos a manejar el envío de los paquetes de acuerdo con nuestros estándares de calidad y seguridad. Entrega: Haremos todo lo posible para que el paquete llegue a su destino dentro del tiempo estimado, pero no somos responsables por retrasos causados por aduanas, condiciones climáticas o cualquier otro evento fuera de nuestro control. Seguimiento: Proporcionaremos información de seguimiento para cada paquete, pero no garantizamos actualizaciones en tiempo real.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '5. Productos Prohibidos',
+        contenido: 'No aceptamos envíos que contengan productos ilegales, peligrosos o restringidos, como armas, drogas, materiales inflamables o explosivos. Cualquier violación de esta política puede resultar en la cancelación del servicio y notificación a las autoridades competentes.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '6. Política de Devoluciones',
+        contenido: 'No ofrecemos reembolsos por el servicio de envío una vez que el paquete ha sido despachado. Si un paquete es devuelto debido a errores en la dirección proporcionada o el incumplimiento de las leyes aduaneras, el cliente será responsable de cualquier costo adicional.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '7. Propiedad Intelectual',
+        contenido: 'Todo el contenido del sitio web, incluyendo textos, gráficos, logotipos y software, es propiedad de sendbol y está protegido por las leyes de derechos de autor y marcas comerciales.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '8. Limitación de Responsabilidad',
+        contenido: 'sendbol no será responsable por daños directos, indirectos o incidentales que resulten del uso o la incapacidad de uso de nuestro servicio, incluyendo pérdida de ganancias, datos o daños a la propiedad.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '9. Modificación de los Términos',
+        contenido: 'Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Los cambios serán efectivos una vez publicados en nuestro sitio web. Es responsabilidad del cliente revisar los términos periódicamente.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '10. Jurisdicción',
+        contenido: 'Estos términos están regidos por las leyes de Bolivia y cualquier disputa relacionada con estos términos será resuelta en los tribunales correspondientes.',
+        subtitulos: []
+      },
+    ]
+  },
+
+  {
+    titulo: 'Política de Tratamiento de Datos Personales sendbol',
+    contenido: 'En sendbol, nos comprometemos a proteger su privacidad mientras utiliza nuestro sitio web y en su comunicación con nosotros, ya sea a través de la plataforma o por correo electrónico.',
+    subtitulos: [
+      {
+        titulo: '1. Información Personal Recopilada',
+        contenido: 'Durante el funcionamiento de nuestra empresa y sitio web, podemos recopilar y procesar ciertos datos personales. Esto puede incluir:',
+        subtitulos: [
+          {
+            titulo: 'Informacion de visita',
+            contenido: 'Detalles de su visita a nuestro sitio web y el contenido que consulta. Esto puede incluir datos de ubicación, datos de comunicación, y lo que usted accede dentro de nuestra plataforma.',
+            subtitulos: []
+          },
+
+            {
+              titulo: 'Información de registro',
+              contenido: 'Información proporcionada al registrarse en nuestro sitio web, como su nombre, dirección de correo electrónico y número de teléfono.',
+              subtitulos: []
+            },
+
+            {
+              titulo: 'Información de formularios',
+              contenido: 'Información de los formularios completados en nuestro sitio web, así como datos necesarios para procesar pedidos y realizar envíos.',
+              subtitulos: []
+            },
+
+            {
+              titulo: 'Información de contacto',
+              contenido: 'Información personal como nombres, direcciones de correo electrónico, números de teléfono, dirección de envío, y datos de pago necesarios para el procesamiento de sus órdenes.',
+              subtitulos: []
+            },
+        ]
+      },
+
+      {
+        titulo: '2. ¿Quién recopila los datos?',
+        contenido: 'La información es recopilada por sendbol, registrada en nuestra base de datos. Si tiene alguna consulta sobre la política de privacidad, puede contactarnos en contact@sendbol.com.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '3. Cómo recopilamos la información',
+        contenido: 'Recopilamos información personal de diversas maneras, ya sea cuando usted nos la proporciona directamente al hacer una compra o cuando navega por nuestro sitio web. Esta información puede incluir:',
+        subtitulos: [
+          {
+            titulo: 'Información de registro',
+            contenido: 'Información que usted proporciona al crear una cuenta, comprar un servicio, suscribirse a un boletín o interactuar de cualquier forma con nuestro sitio web. Información de terceros como plataformas de pago y sistemas de envío.',
+            subtitulos: []
+          },
+        ]
+      },
+
+      {
+        titulo: '4. Información Recolectada por Terceros',
+        contenido: 'Podemos recibir información de terceros, como servicios de análisis de datos o plataformas de publicidad, con el objetivo de mejorar nuestra oferta de servicios. Algunas plataformas que utilizamos incluyen:',
+        subtitulos: [
+          {
+            titulo: 'Google Analytics',
+            contenido: 'Para análisis de datos del tráfico en el sitio web.',
+            subtitulos: []
+          },
+
+          {
+            titulo: 'Google Tag Manager',
+            contenido: 'Para gestionar etiquetas y herramientas de seguimiento.',
+            subtitulos: []
+          },
+
+          {
+            titulo: 'Facebook Ads',
+            contenido: 'Para publicidad y análisis de datos.',
+            subtitulos: []
+          },
+
+          {
+            titulo: 'MailChimp',
+            contenido: 'Para el envío de boletines y correos electrónicos.',
+            subtitulos: []
+          },
+
+          {
+            titulo: 'Plataformas de pago seguras',
+            contenido: ' Para procesar sus transacciones financieras.',
+            subtitulos: []
+          },
+
+        ]
+      },
+
+      {
+        titulo: '5. Cookies',
+        contenido: 'Nuestro sitio web utiliza cookies para mejorar la experiencia del usuario. Las cookies son pequeños archivos de datos que se almacenan en su navegador mientras visita nuestro sitio web, permitiendo que recordemos sus preferencias y optimicemos el rendimiento de la página. Puede gestionar las cookies desde la configuración de su navegador. Sin embargo, deshabilitar cookies podría afectar la funcionalidad de ciertas partes del sitio web.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '6. Uso de la Información',
+        contenido: 'La información que recopilamos es utilizada principalmente para facilitar y mejorar la experiencia en nuestro sitio web y permitir la realización de envíos internacionales. También puede ser utilizada para:',
+        subtitulos: [
+
+          {
+            titulo: 'Gestion de pedidos',
+            contenido: 'Procesar sus pedidos y asegurarnos de que los paquetes lleguen a su destino de manera segura y eficiente.',
+            subtitulos: []
+          },
+
+          {
+            titulo: 'Atencion al cliente',
+            contenido: 'Brindar soporte al cliente y responder consultas.',
+            subtitulos: []
+          },
+
+          {
+            titulo: 'Personalizacion',
+            contenido: 'Personalizar su experiencia en nuestro sitio web.',
+            subtitulos: []
+          },
+
+          {
+            titulo: 'Transacciones',
+            contenido: 'Procesar sus transacciones y mantener un historial de pedidos.',
+            subtitulos: []
+          },
+
+          {
+            titulo: 'Notificaciones',
+            contenido: 'Notificarle sobre cambios importantes en nuestra política de privacidad o términos de servicio.',
+            subtitulos: []
+          },
+
+          {
+            titulo: 'Encuestas',
+            contenido: 'Realizar encuestas o enviar ofertas promocionales relevantes.',
+            subtitulos: []
+          },
+        ]
+      },
+
+      {
+        titulo: '7. ¿Cómo protegemos su información?',
+        contenido: 'Implementamos varias medidas de seguridad para proteger la información personal que recopilamos. Nuestro sitio web utiliza tecnología de cifrado SSL (Secure Socket Layer) para proteger las transacciones y asegurarnos de que la información confidencial se mantenga segura durante su transmisión.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '8. Almacenamiento de Datos',
+        contenido: 'Toda la información personal recopilada es almacenada en servidores seguros. Las transacciones financieras están protegidas con encriptación SSL, y sus datos personales solo serán accesibles por el personal autorizado, quienes deben mantener la confidencialidad de los datos.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '9. Divulgación de la Información',
+        contenido: 'No compartimos su información personal con terceros, a menos que sea necesario para completar los envíos o cumplir con la ley. Los proveedores que trabajan con nosotros para operar el sitio web o procesar pedidos deben mantener la confidencialidad de la información y no utilizarla para ningún otro fin.',
+        subtitulos: []
+      },
+
+      {
+        titulo: '10. Eliminacion de sus datos',
+        contenido: 'Si decide que ya no desea utilizar nuestros servicios, tiene el derecho de solicitar la eliminación de su cuenta y la información personal asociada. Para hacerlo, comuníquese con nosotros a través de contact@sendbol.com, y eliminaremos sus datos de nuestros sistemas una vez confirmada su solicitud.',
+        subtitulos: []
+      },
+    ]
+  },
+
+];
+
+
+
+
+
+
 export const SOCIALMEDIA: SocialMedia[] = [
   {
     name: 'facebook',
@@ -91,4 +332,5 @@ export const SVGS: svgs[] = [
   }
 ];
 //src\assets\images\pages\landing\scr1.png
+
 

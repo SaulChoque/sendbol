@@ -1,0 +1,31 @@
+.title h4{
+  font-family: 'Typo-hoop';
+  text-decoration: none; /* Elimina el subrayado */
+  color: black;
+}
+
+#br1.navbar-brand a{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--mat-toolbar-container-background-color, var(--mat-app-surface));
+}
+
+#titlePc.title h4{
+  font-size: 3em;
+}
+
+#titleCel.title h4{
+  font-size: 1.8em;
+}
+
+.navbar{
+  padding: 2.5%;
+  background-color: var(--mat-toolbar-container-background-color, var(--mat-app-surface));
+}
+
+.inner-navbar{
+  gap: 1rem;
+}

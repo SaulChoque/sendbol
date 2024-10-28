@@ -1,32 +1,23 @@
 import { Component, Input } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
-
-//CMMT: Importacion de constantes
-import { SVGS } from '../../models/constants';
-import { SOCIALMEDIA } from '../../models/constants';
-
-
 //CMMT: Importacion de servicios
 import { MediaQueryService } from '../../services/media-query.service';
 import { Breakpoints } from '@angular/cdk/layout';
 
 @Component({
-  selector: 'app-footer-item',
+  selector: 'app-nav-item',
   standalone: true,
-  imports: [MatButtonModule, MatIconModule, MatGridListModule, MatListModule,
-    RouterModule
+  imports: [MatButtonModule, MatIconModule, MatMenuModule,
+    MatToolbarModule, RouterModule
   ],
-  templateUrl: './footer-item.component.html',
-  styleUrl: './footer-item.component.css'
+  templateUrl: './nav-item.component.html',
+  styleUrl: './nav-item.component.css'
 })
-export class FooterItemComponent {
-  svgs = [...SVGS];
-
-  socialmedia = [...SOCIALMEDIA];
+export class NavItemComponent {
   constructor(
     private mediaQueryService: MediaQueryService,
   ) {}
@@ -50,5 +41,4 @@ export class FooterItemComponent {
 
     //console.log(this.constantes.IMGBAN001);
   }
-
 }
