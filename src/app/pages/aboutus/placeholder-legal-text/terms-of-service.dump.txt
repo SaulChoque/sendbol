@@ -1,0 +1,95 @@
+<div class="container">
+  <p-splitter
+      [panelSizes]="[25, 75]"
+
+      styleClass="mb-5">
+          <ng-template pTemplate>
+              <div class="col flex align-items-center justify-content-center">
+                  <app-text-tree-item [articulo]="articles"></app-text-tree-item>
+              </div>
+          </ng-template>
+          <ng-template pTemplate>
+              <div class="container">
+                <h2 class="text-center">Términos y Condiciones</h2>
+
+                <h5> 1. Aceptación de los Términos </h5>
+                <br>
+                Al utilizar los servicios de sendbol, usted acepta cumplir con estos términos y condiciones. Si no está de acuerdo con alguno de los términos, no debe utilizar nuestros servicios.
+
+
+                <br>
+                <br>
+
+                <h5>2. Descripción del Servicio</h5>
+                <br>
+                sendbol ofrece servicios de empaquetaría y envío desde Estados Unidos a Bolivia. El cliente contrata nuestros servicios para gestionar el envío de paquetes, realizar el seguimiento y asegurar que lleguen a su destino en las mejores condiciones posibles.
+
+
+                <br>
+                <br>
+
+                <h5>3. Responsabilidades del Cliente</h5>
+                <br>
+                Precisión de la información: El cliente es responsable de proporcionar información completa y precisa para el envío, incluyendo dirección de entrega, peso y contenido del paquete.
+                Pago de tarifas: El cliente debe pagar las tarifas correspondientes antes de que se procesen los envíos. Las tarifas incluyen costos de envío, impuestos y tarifas aduaneras según sea necesario.
+                Cumplimiento con la ley: El cliente debe asegurarse de que los productos enviados cumplen con las leyes de importación y exportación de ambos países.
+
+                <br>
+                <br>
+
+                <h5>4. Responsabilidades de sendbol</h5>
+                <br>
+                Transporte: Nos comprometemos a manejar el envío de los paquetes de acuerdo con nuestros estándares de calidad y seguridad.
+                Entrega: Haremos todo lo posible para que el paquete llegue a su destino dentro del tiempo estimado, pero no somos responsables por retrasos causados por aduanas, condiciones climáticas o cualquier otro evento fuera de nuestro control.
+                Seguimiento: Proporcionaremos información de seguimiento para cada paquete, pero no garantizamos actualizaciones en tiempo real.
+
+                <br>
+                <br>
+
+                <h5>5. Productos Prohibidos</h5>
+                <br>
+                No aceptamos envíos que contengan productos ilegales, peligrosos o restringidos, como armas, drogas, materiales inflamables o explosivos. Cualquier violación de esta política puede resultar en la cancelación del servicio y notificación a las autoridades competentes.
+
+
+                <br>
+                <br>
+
+                <h5>6. Política de Devoluciones</h5>
+                <br>
+                No ofrecemos reembolsos por el servicio de envío una vez que el paquete ha sido despachado. Si un paquete es devuelto debido a errores en la dirección proporcionada o el incumplimiento de las leyes aduaneras, el cliente será responsable de cualquier costo adicional.
+
+
+                <br>
+                <br>
+
+                <h5>7. Propiedad Intelectual</h5>
+                <br>
+                Todo el contenido del sitio web, incluyendo textos, gráficos, logotipos y software, es propiedad de sendbol y está protegido por las leyes de derechos de autor y marcas comerciales.
+
+
+                <br>
+                <br>
+
+                <h5>8. Limitación de Responsabilidad</h5>
+                <br>
+                sendbol no será responsable por daños directos, indirectos o incidentales que resulten del uso o la incapacidad de uso de nuestro servicio, incluyendo pérdida de ganancias, datos o daños a la propiedad.
+
+
+                <br>
+                <br>
+
+                <h5>9. Modificación de los Términos</h5>
+                <br>
+                Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Los cambios serán efectivos una vez publicados en nuestro sitio web. Es responsabilidad del cliente revisar los términos periódicamente.
+
+
+                <br>
+                <br>
+
+                <h5>10. Jurisdicción</h5>
+                <br>
+                Estos términos están regidos por las leyes de Bolivia y cualquier disputa relacionada con estos términos será resuelta en los tribunales correspondientes.
+              </div>
+          </ng-template>
+  </p-splitter>
+</div>

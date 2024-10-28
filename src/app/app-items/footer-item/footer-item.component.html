@@ -30,8 +30,16 @@
         <mat-grid-tile>
           <mat-list>
             <mat-list-item><h5>Acerca de</h5></mat-list-item>
-            <mat-list-item><span>Politica de Privacidad</span></mat-list-item>
-            <mat-list-item><span>Terminos de Servicio</span></mat-list-item>
+            <mat-list-item>
+              <a [routerLink]="['legal', 'ToS']" class="navbar-brand" id="br1">
+                <span>Terminos de Servicio</span>
+              </a>
+            </mat-list-item>
+            <mat-list-item>
+              <a [routerLink]="['legal', 'PP']" class="navbar-brand" id="br1">
+                <span>Politica de Privacidad</span>
+              </a>
+            </mat-list-item>
           </mat-list>
 
         </mat-grid-tile>
@@ -103,10 +111,14 @@
         <mat-list>
           <mat-list-item><h5>Acerca de</h5></mat-list-item>
           <mat-list-item>
-            <span>Politica de Privacidad</span>
+            <a [routerLink]="['legal', 'ToS']" class="navbar-brand" id="br1">
+              <span>Terminos de Servicio</span>
+            </a>
           </mat-list-item>
           <mat-list-item>
-            <span>Terminos de Servicio</span>
+            <a [routerLink]="['legal', 'PP']" class="navbar-brand" id="br1">
+              <span>Politica de Privacidad</span>
+            </a>
           </mat-list-item>
         </mat-list>
 

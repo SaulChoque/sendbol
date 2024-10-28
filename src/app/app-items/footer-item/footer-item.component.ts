@@ -3,6 +3,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
+import { RouterModule } from '@angular/router';
 
 //CMMT: Importacion de constantes
 import { SVGS } from '../../models/constants';
@@ -16,7 +17,9 @@ import { Breakpoints } from '@angular/cdk/layout';
 @Component({
   selector: 'app-footer-item',
   standalone: true,
-  imports: [MatButtonModule, MatIconModule, MatGridListModule, MatListModule],
+  imports: [MatButtonModule, MatIconModule, MatGridListModule, MatListModule,
+    RouterModule
+  ],
   templateUrl: './footer-item.component.html',
   styleUrl: './footer-item.component.css'
 })
