@@ -7,3 +7,9 @@
   margin: 2%;
 }
 
+.app-landing-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

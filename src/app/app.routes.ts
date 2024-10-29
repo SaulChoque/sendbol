@@ -23,7 +23,7 @@ export const routes: Routes = [
 
   { path: 'legal/:id',
     component: PlaceholderLegalTextComponent,
-    title: ':id',
+    title: 'legal',
   },
 
 
