@@ -1,4 +1,8 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
+
 :host {
+
   position: relative;
 }
 
@@ -13,3 +17,21 @@
   justify-content: center;
 }
 
+.mat-icon {
+  -webkit-user-select: none;
+  user-select: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+}
+
+.material-icons-outlined {
+  font-size: 200px;
+}
+
+.svg-icon {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+}
