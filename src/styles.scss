@@ -19,8 +19,8 @@
   src: url(assets/fonts/typo-hoop/Typo\ Hoop_Regular_Demo.otf) format('opentype');
   font-weight: normal;
   font-style: normal;
-
 }
+
 :host {
   display: flex;
 
@@ -35,3 +35,5 @@ body {
   background-color: #fbf3f0;
 }
 
+
+@import "@angular/material/core/theming";
