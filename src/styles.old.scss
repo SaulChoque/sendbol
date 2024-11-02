@@ -1,0 +1,81 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Opificio';
+  src: url(assets/fonts/opificio/opificio_regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Opificio';
+  src: url(assets/fonts/opificio/opificio_bold.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Typo-hoop';
+  src: url(assets/fonts/typo-hoop/Typo\ Hoop_Regular_Demo.otf) format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:host {
+  display: flex;
+
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #fbf3f0;
+}
+
+
+// Paletas de colores para alto contraste
+$high-contrast-dark-primary: mat.define-palette(mat.$violet-palette, 700, 500, 900);
+$high-contrast-light-primary: mat.define-palette(mat.$violet-palette, 200, 100, 300);
+
+// Paletas de colores para medio contraste
+$medium-contrast-dark-primary: mat.define-palette(mat.$violet-palette, 600, 400, 800);
+$medium-contrast-light-primary: mat.define-palette(mat.$violet-palette, 300, 200, 400);
+
+
+// Define a dark theme
+$dark-theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$violet-palette,
+  ),
+));
+
+// Define a light theme
+$light-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$violet-palette,
+  ),
+));
+
+html {
+  // Apply the dark theme by default
+  @include mat.core-theme($dark-theme);
+  @include mat.button-theme($dark-theme);
+
+  // Apply the light theme only when the user prefers light themes.
+  @media (prefers-color-scheme: light) {
+    // Use the `-color` mixins to only apply color styles without reapplying the same
+    // typography and density styles.
+    @include mat.core-color($light-theme);
+    @include mat.button-color($light-theme);
+  }
+}

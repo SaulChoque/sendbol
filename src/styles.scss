@@ -1,3 +1,16 @@
+@use '@angular/material' as mat;
+@use 'm3-theme.scss' as m3-theme;
+
+@include mat.core();
+
+
+html {
+  //@include mat.all-component-colors(m3-theme.$light-theme);
+  // Apply the light theme by default
+  @include mat.core-theme(m3-theme.$light-theme);
+  @include mat.button-color(m3-theme.$dark-theme);
+}
+
 /* You can add global styles to this file, and also import other style files */
 @font-face {
   font-family: 'Opificio';
@@ -20,6 +33,11 @@
   font-weight: normal;
   font-style: normal;
 }
+:root{
+  @include mat.all-component-themes(m3-theme.$dark-theme);
+
+  
+}
 
 :host {
   display: flex;
@@ -34,6 +52,3 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: #fbf3f0;
 }
-
-
-@import "@angular/material/core/theming";
