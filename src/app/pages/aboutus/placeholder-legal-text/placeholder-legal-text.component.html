@@ -1,0 +1,58 @@
+
+@if(currentBreakpoint == breakpoints.Large || currentBreakpoint == breakpoints.Medium){
+<div id="contPc" class="container">
+
+  <div class="linkTree">
+      <app-text-tree-item [articulo]="article"></app-text-tree-item>
+  </div>
+
+
+  <div class="textContainer">
+    <h2 class="text-center">{{article.titulo}}</h2>
+    @for (item of article.subtitulos; track $index) {
+      <div id="{{item.titulo}}" class="itemArticulo">
+        <h5> {{item.titulo}} </h5>
+
+        {{item.contenido}}
+        @if (!!item.subtitulos && item.subtitulos.length > 0) {
+          @for (subitem of item.subtitulos; track $index) {
+            <div id="{{subitem.titulo}}" class="itemArticulo">
+              <h6> {{subitem.titulo}} </h6>
+              {{subitem.contenido}}
+            </div>
+          }
+        }
+      </div>
+    }
+  </div>
+
+</div>
+}
+
+<!--CMMT TELEFONOS -->
+@else if (currentBreakpoint == breakpoints.XSmall || currentBreakpoint == breakpoints.Small) {
+  <div id="contCel" class="container">
+
+    <div class="textContainer">
+      <h3 class="text-center">{{article.titulo}}</h3>
+      @for (item of article.subtitulos; track $index) {
+        <div id="{{item.titulo}}" class="itemArticulo">
+          <h6> {{item.titulo}} </h6>
+          {{item.contenido}}
+          @if (!!item.subtitulos && item.subtitulos.length > 0) {
+            @for (subitem of item.subtitulos; track $index) {
+              <div id="{{subitem.titulo}}" class="itemArticulo">
+                <h6> {{subitem.titulo}} </h6>
+                {{subitem.contenido}}
+              </div>
+            }
+          }
+        </div>
+      }
+    </div>
+
+  </div>
+
+}
+
+

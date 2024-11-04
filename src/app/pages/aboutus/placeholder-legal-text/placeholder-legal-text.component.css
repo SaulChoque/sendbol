@@ -1,0 +1,43 @@
+h2{
+  font-family: 'Typo-hoop';
+  text-decoration: none; /* Elimina el subrayado */
+  color: var(--primary-color-text, var(--mat-text-color));
+  font-size: 3em;
+}
+
+.container
+{
+  color: var(--primary-color-text, var(--mat-text-color));
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.linkTree{
+  position: sticky;
+  top: 20px;
+  flex: 0 0 35%; /* Ocupa el 25% del ancho */
+  padding: 10px; /* Opcional: agrega padding para separación */
+  align-self: flex-start;
+}
+
+
+.textContainer {
+  padding: 10px; /* Opcional: agrega padding para separación */
+}
+
+#contCel.textContainer {
+  flex: 0 0 65%; /* Ocupa el 75% del ancho */
+}
+
+#contCel h3{
+  font-family: 'Typo-hoop';
+  text-decoration: none; /* Elimina el subrayado */
+  color: var(--primary-color-text, var(--mat-text-color));
+  font-size: 2em;
+}
+
+
+.itemArticulo{
+  padding: 2%;
+}

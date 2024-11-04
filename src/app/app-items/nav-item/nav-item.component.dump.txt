@@ -1,0 +1,73 @@
+
+    <div class="main-nav">
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <!--CMMT BTN Logo Button
+          <button mat-stroked-button
+          style="height: auto; width: auto;  padding: 0; border-radius: 15px;"
+          >
+          <mat-icon
+          style="font-size: 4rem; height: auto; width: auto; margin: 0; color: black;"
+          >
+          pets
+        </mat-icon>
+      </button>
+      -->
+
+      <!--CMMT TTL Title Button -->
+      <a class="navbar-brand"
+      routerLink=''
+      style="margin: 1vh;"
+      >
+        <h4>Sendbol</h4>
+      </a>
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!--CMMT MENU Dropdown-->
+        <li class="nav-item">
+          <!--
+
+          <mat-form-field
+          style="width: 60vh;"
+          appearance="outline"
+          #formField="matFormField"
+          subscriptSizing="dynamic"
+          style="border-radius: 9999px;">
+          <mat-label>{{ 'Buscar'}}</mat-label>
+          <input matInput>
+        </mat-form-field>
+        -->
+      </li>
+
+
+    </ul>
+    <!--CMMT BAR BarraBusqueda-->
+    <li class="nav-item dropdown">
+      <span style="position: relative">
+        <button mat-fab extended [matMenuTriggerFor]="menu">
+          <mat-icon>favorite</mat-icon>
+          Inicio sesion
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </span>
+      <button mat-fab aria-label="shopping_cart"
+      style="margin: 2vh;"
+      >
+      <mat-icon>shopping_bag</mat-icon>
+    </button>
+  </li>
+</div>
+</div>
+</nav>
+</div>

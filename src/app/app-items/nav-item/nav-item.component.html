@@ -1,0 +1,46 @@
+@if(currentBreakpoint == breakpoints.Large || currentBreakpoint == breakpoints.Medium){
+<div class="navbar">
+  <mat-toolbar class="inner-navbar">
+
+
+
+    <a routerLink="" class="navbar-brand" id="br1">
+
+
+
+
+
+      <span class="title" id="titlePc">
+        <h4>sendbol</h4>
+      </span>
+
+
+
+    </a>
+    <span class="example-spacer"></span>
+
+  </mat-toolbar>
+</div>
+
+}
+@else if (currentBreakpoint == breakpoints.XSmall || currentBreakpoint == breakpoints.Small) {
+
+
+<div class="navbar">
+  <mat-toolbar class="inner-navbar">
+
+    <a routerLink="" class="navbar-brand" id="br1">
+
+
+
+      <span class="title" id="titleCel">
+        <h4>sendbol</h4>
+      </span>
+
+
+    </a>
+    <span class="example-spacer"></span>
+
+  </mat-toolbar>
+</div>
+}

@@ -2,11 +2,11 @@
 
 
 
- <!-- CMMT EXPLN XSMALL -->
-@if(currentBreakpoint == "(max-width: 599.98px)"){
-    <div 
+ <!-- CMMT EXPLN XSMALL TELEFONOS-->
+@if(currentBreakpoint == breakpoints.XSmall || currentBreakpoint == breakpoints.Small){
+    <div
     id="b1"
-    data-aos="fade-up" 
+    data-aos="fade-up"
     class="body"
     >
         <div>
@@ -20,17 +20,19 @@
             </ng-template>
           </p-image>
         </div>
-        <div 
+        <div
+        id = "TLT1"
         class="title"
         >
             <h1
-            [style.font-size]="fontSize"
             >
                 {{item?.descripcion}}
             </h1>
-    
+
+
+            <!-- CMMT BTN Formulario -->
             @if(item?.button) {
-              <button mat-fab extended>
+              <button mat-fab extended [routerLink]='link'>
                 <mat-icon>favorite</mat-icon>
                   {{item?.buttonName}}
               </button>
@@ -38,42 +40,62 @@
         </div>
     </div>
 }
-@else {
-    <div data-aos="fade-up" class="body">
-        <div class="title">
-   
-        <h1
-        [style.font-size]="fontSize"
-        >
-            {{item?.descripcion}}
 
-        </h1>
 
-        @if(item?.button) {
-          <button mat-fab extended>
-            <mat-icon>favorite</mat-icon>
-              {{item?.buttonName}}
-          </button>
-        }
+ <!-- CMMT EXPLN LARGE AND MEDIUM  -->
+
+@else if (currentBreakpoint == breakpoints.Large || currentBreakpoint == breakpoints.Medium){
+  <div
+  id="b2"
+  data-aos="fade-up"
+  class="body">
+
+
+    <div
+    class="title"
+    id = "TLT2"
+    >
+
+      <h1>
+          {{item?.descripcion}}
+      </h1>
+
+
+      @if(item?.button) {
+        <button mat-fab extended [routerLink]='link'>
+          <mat-icon>favorite</mat-icon>
+            {{item?.buttonName}}
+        </button>
+      }
+
+
     </div>
-    
-    <div 
+
+
+    <div
     [style.text-align]="item?.orientacion"
     >
+
+
       <p-image
       [src]="item?.imgsrc"
       [preview]="false"
       alt="Image"
-      [width]="currentWidth">
+      [width]="ImagesSizes[2]">
+
+
         <ng-template pTemplate="indicator">
           <i class="pi pi-check"></i>
         </ng-template>
+
+
       </p-image>
+
+
     </div>
 
-    {{currentWidth}}
 
-</div>
-    }
-  
-  
+
+  </div>
+}
+

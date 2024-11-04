@@ -1,0 +1,62 @@
+@use '@angular/material' as mat;
+@use 'm3-theme.scss' as m3-theme;
+
+@include mat.core();
+
+
+html {
+  //@include mat.all-component-colors(m3-theme.$light-theme);
+  // Apply the light theme by default
+  @include mat.core-theme(m3-theme.$light-theme);
+  @include mat.button-color(m3-theme.$dark-theme);
+}
+
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Opificio';
+  src: url(assets/fonts/opificio/opificio_regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Opificio';
+  src: url(assets/fonts/opificio/opificio_bold.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Typo-hoop';
+  src: url(assets/fonts/typo-hoop/Typo\ Hoop_Regular_Demo.otf) format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+:root{
+  @include mat.all-component-themes(m3-theme.$dark-theme);
+
+
+}
+
+:host {
+  display: flex;
+
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--mat-app-background-color);
+}
+
+
+
+.abel-regular {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
