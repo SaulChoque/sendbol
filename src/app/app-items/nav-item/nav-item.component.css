@@ -1,7 +1,7 @@
 .title h4{
   font-family: 'Typo-hoop';
   text-decoration: none; /* Elimina el subrayado */
-  color: black;
+  color: var(--primary-color-text, var(--mat-text-color));
 }
 
 #br1.navbar-brand a{
@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: var(--mat-toolbar-container-background-color, var(--mat-app-surface));
+  background-color: var(--mat-sidenav-content-background-color, var(--mat-app-background))
 }
 
 #titlePc.title h4{

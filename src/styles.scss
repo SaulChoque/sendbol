@@ -36,7 +36,7 @@ html {
 :root{
   @include mat.all-component-themes(m3-theme.$dark-theme);
 
-  
+
 }
 
 :host {
@@ -50,5 +50,13 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: #fbf3f0;
+  background-color: var(--mat-app-background-color);
+}
+
+
+
+.abel-regular {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

@@ -8,14 +8,21 @@
 
 
 .body-landing {
-  margin: 2%;
+
+  background-color: #000000;
 }
 
+/*CMMT ITEM LANDING 1*/
 .app-landing-item{
   display: flex;
+  padding: 15px;
   align-items: center;
   justify-content: center;
+
 }
+
+
+
 
 .mat-icon {
   -webkit-user-select: none;
@@ -32,6 +39,58 @@
   font-size: 200px;
 }
 
-.svg-icon {
-    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+#svgc1.svg-icon-container {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  animation: svg 4s infinite, moveder 1s forwards; /* Agrega múltiples animaciones aquí */
 }
+
+#svgc2.svg-icon-container {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  animation: svg 4s infinite, moveizq 1s forwards; /* Agrega múltiples animaciones aquí */
+}
+
+@keyframes svg {
+  0%   {color: #c1c1c1;}
+  14.2%  {color: #aac7ff;}
+  28.4%  {color: #f9f9ff;}
+  42.6%  {color: #d6e3ff;}
+  56.8% {color: #dae2f9;}
+  71% {color: #aac7ff;}
+  100%   {color: #c1c1c1;}
+}
+
+@keyframes moveder {
+  0%   {left: 100px; transform: rotate(0deg);}
+  100%   {left: 0px; transform: rotate(-30deg);}
+}
+@keyframes moveizq {
+  0%   {right: 100px; transform: rotate(0deg);}
+  100%   {right: 0px; transform: rotate(25deg);}
+}
+
+.titleitem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: var(--primary-color-text, var(--mat-text-color));
+}
+
+.titleitem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+
+  color: var(--primary-color-text, var(--mat-text-color));
+}
+
+h1{
+  font-size: 7em;
+  font-family: 'Abel';
+}
+

@@ -1,15 +1,20 @@
+h1{
+  color: var(--primary-color-text, var(--mat-text-color));
+
+}
+
 
 #TLT1.title h1{
-    color: #000000;
-    font-size: 2em;
-    text-align: left;
-    font-family: 'Opificio';
+  color: var(--primary-color-text, var(--mat-text-color));
+  font-size: 2em;
+  text-align: left;
+  font-family: 'Opificio';
 }
 #TLT2.title h2{
-    color: #000000;
-    font-size: 5em;
-    text-align: left;
-    font-family: 'Opificio';
+  color: var(--primary-color-text, var(--mat-text-color));
+  font-size: 5em;
+  text-align: left;
+  font-family: 'Opificio';
 }
 
 /*CMMT EXPLN Body styles */
