@@ -1,46 +1,67 @@
 <div class="body">
-  <mat-card appearance="outlined">
-    <mat-card-header>FORMULARIO</mat-card-header>
-    <mat-card-content>
-      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-        <p>
-          <mat-form-field appearance="outline" class="formField" id="f1">
-            <input matInput placeholder="Nombre" formControlName="nombre">
-          </mat-form-field>
-        </p>
 
-        <p>
-          <mat-form-field appearance="outline" class="formField" id="f2">
-            <input matInput placeholder="Email" formControlName="email">
-          </mat-form-field>
-        </p>
+  <div class="formContainer">
+    <mat-card appearance="outlined">
+      <mat-card-header>FORMULARIO</mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <p>
+            <mat-form-field appearance="outline" class="formField" id="f1">
+              <input matInput placeholder="Nombre" formControlName="nombre">
+            </mat-form-field>
+          </p>
 
-        <p>
-          <mat-form-field appearance="outline" class="formField" id="f3">
-            <input matInput placeholder="Teléfono" formControlName="telefono">
-          </mat-form-field>
-        </p>
+          <p>
+            <mat-form-field appearance="outline" class="formField" id="f2">
+              <mat-label>Correo electronico</mat-label>
+              <input 
+                matInput 
+                formControlName="email"
+                (blur)="updateErrorMessage()"
+                required          
+              />
+              @if (email.invalid) {
+                <mat-error>{{errorMessage()}}</mat-error>
+              }
+              <mat-icon matSuffix>mail</mat-icon>
+            </mat-form-field>
+          </p>
 
-        <p>
+          <p>
+            <mat-form-field appearance="outline" class="formField" id="f3">
+              <mat-label>Telefono</mat-label>
+              <input matInput formControlName="telefono">
+              <mat-icon matSuffix>phone</mat-icon>
+              <mat-hint>Esribe tu numero de telefono</mat-hint>
+            </mat-form-field>
+          </p>
+          
+          <p>
+            <mat-form-field appearance="outline" class="formField" id="f4">
+              <mat-label>Enlace del Producto</mat-label>
+              <input matInput formControlName="enlace">
+              <mat-icon matSuffix>link</mat-icon>
+              <mat-hint>Escribe o pega el enlace a tu producto</mat-hint>
+            </mat-form-field>
+          </p>
 
-          <mat-form-field appearance="outline" class="formField" id="f4">
-            <input matInput placeholder="Asunto" formControlName="asunto">
-          </mat-form-field>
-        </p>
+          <p>
 
-        <p>
+            <mat-form-field appearance="outline" class="formField" id="f5">
+              <textarea matInput placeholder="Mensaje" formControlName="mensaje"></textarea>
+            </mat-form-field>
+          </p>
 
-          <mat-form-field appearance="outline" class="formField" id="f5">
-            <textarea matInput placeholder="Mensaje" formControlName="mensaje"></textarea>
-          </mat-form-field>
-        </p>
+          <p>
 
-        <p>
+            <button mat-raised-button color="primary" type="submit">Enviar</button>
+          </p>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
-          <button mat-raised-button color="primary" type="submit">Enviar</button>
-        </p>
-      </form>
-    </mat-card-content>
-  </mat-card>
+<div class="textContainer">
 
+</div>
 </div>

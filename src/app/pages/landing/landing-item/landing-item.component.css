@@ -6,26 +6,29 @@ h1{
 
 #TLT1.title h1{
   color: var(--primary-color-text, var(--mat-text-color));
-  font-size: 2em;
+  font-size: 3em;
   text-align: left;
-  font-family: 'Opificio';
+  font-family: 'Abel';
 }
+
+
+
 #TLT2.title h2{
   color: var(--primary-color-text, var(--mat-text-color));
-  font-size: 5em;
   text-align: left;
-  font-family: 'Opificio';
+  font-size: 6em;
+  font-family: 'Abel';
 }
 
 /*CMMT EXPLN Body styles */
 #b1.body {
-    font-family: 'Opificio';
+    font-family: 'Abel';
     display: flex;
     flex-direction: column;
 }
 
 #b2.body {
-  font-family: 'Opificio';
+  font-family: 'Abel';
   display: flex;
 }
 

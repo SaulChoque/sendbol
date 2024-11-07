@@ -216,3 +216,56 @@
   margin-bottom: -20px;
 }
 
+
+
+[data-aos="svgc2-CEL-amz"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(100px);
+  opacity: 0;
+  
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
+  }
+}
+
+[data-aos="svgc2-CEL-ebay"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(0px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(50px) translateX(50px);
+    opacity: 1;
+  }
+}
+
+[data-aos="svgc2-CEL-ets"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(-50px);
+  opacity: 0;
+  
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(-70px) translateX(-60px);
+    opacity: 1;
+  }
+}
+
+[data-aos="svgc2-CEL-shn"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(-100px);
+  opacity: 0;
+  
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(-10px) translateX(-50px);
+    opacity: 1;
+  }
+}
+

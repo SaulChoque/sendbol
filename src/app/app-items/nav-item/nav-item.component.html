@@ -1,6 +1,7 @@
+<!-- CMMT COMPU -->
 @if(currentBreakpoint == breakpoints.Large || currentBreakpoint == breakpoints.Medium){
 <div class="navbar">
-  <mat-toolbar class="inner-navbar">
+  <mat-toolbar class="inner-navbar" style="justify-content: space-between;">
 
 
 
@@ -17,12 +18,30 @@
 
 
     </a>
-    <span class="example-spacer"></span>
+    
+    
+
+    
+    <button mat-fab extended class="resaleBtn">
+
+      <mat-icon>favorite</mat-icon>
+
+      <span style="display: flex;">
+        <h5>sendbol</h5>
+        <span style="padding-right: 3%;">   </span>
+        <h4>Re-sale</h4>
+      </span>
+
+    </button>
 
   </mat-toolbar>
+
 </div>
 
 }
+
+
+<!-- CMMT CELULAR -->
 @else if (currentBreakpoint == breakpoints.XSmall || currentBreakpoint == breakpoints.Small) {
 
 
@@ -39,7 +58,12 @@
 
 
     </a>
+
     <span class="example-spacer"></span>
+    <button mat-fab extended>
+      <mat-icon>favorite</mat-icon>
+      Re-sale
+    </button>
 
   </mat-toolbar>
 </div>
