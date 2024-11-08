@@ -7,22 +7,26 @@
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <p>
             <mat-form-field appearance="outline" class="formField" id="f1">
-              <input matInput placeholder="Nombre" formControlName="nombre">
+              <mat-label>Nombre</mat-label>
+              <input matInput formControlName="nombre">
+              <mat-icon matSuffix>person</mat-icon>
+              <mat-hint>Esribe tu nombre</mat-hint>
             </mat-form-field>
           </p>
 
           <p>
             <mat-form-field appearance="outline" class="formField" id="f2">
               <mat-label>Correo electronico</mat-label>
-              <input 
-                matInput 
+              <input
+                matInput
                 formControlName="email"
                 (blur)="updateErrorMessage()"
-                required          
+                required
               />
-              @if (email.invalid) {
+              @if (contactForm.get('email')?.invalid) {
                 <mat-error>{{errorMessage()}}</mat-error>
               }
+
               <mat-icon matSuffix>mail</mat-icon>
             </mat-form-field>
           </p>
@@ -35,7 +39,7 @@
               <mat-hint>Esribe tu numero de telefono</mat-hint>
             </mat-form-field>
           </p>
-          
+
           <p>
             <mat-form-field appearance="outline" class="formField" id="f4">
               <mat-label>Enlace del Producto</mat-label>
@@ -43,6 +47,20 @@
               <mat-icon matSuffix>link</mat-icon>
               <mat-hint>Escribe o pega el enlace a tu producto</mat-hint>
             </mat-form-field>
+          </p>
+
+          <p>
+            <mat-button-toggle-group
+            [formControl]="metPago"
+            aria-label="Metodo de Pago"
+            (blur)="updateErrorMessage()"
+            >
+              <mat-button-toggle value="bold">Efectivo</mat-button-toggle>
+              <mat-button-toggle value="italic">QR</mat-button-toggle>
+              <mat-button-toggle value="underline">Tarjeta debito/credito</mat-button-toggle>
+              <mat-button-toggle value="underline">PayPal</mat-button-toggle>
+            </mat-button-toggle-group>
+            <mat-error>{{errorMessage()}}</mat-error>
           </p>
 
           <p>

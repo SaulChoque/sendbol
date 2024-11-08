@@ -6,6 +6,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 import {merge} from 'rxjs';
 
 
@@ -17,7 +19,10 @@ import {merge} from 'rxjs';
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonToggleModule,
+    FormsModule,
+
   ],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.css'
@@ -27,15 +32,12 @@ export class ContactFormComponent {
 
   contactForm: FormGroup;
 
-  readonly email = new FormControl('', [Validators.required, Validators.email,]);
+  readonly metPago = new FormControl('', [Validators.required]);
 
   errorMessage = signal('');
 
   constructor(private fb: FormBuilder) {
 
-    merge(this.email.statusChanges, this.email.valueChanges)
-    .pipe(takeUntilDestroyed())
-    .subscribe(() => this.updateErrorMessage());
 
     this.contactForm = this.fb.group({
 
@@ -46,6 +48,8 @@ export class ContactFormComponent {
       telefono: ['', Validators.required],
 
       enlace: ['', Validators.required],
+
+
 
       mensaje: ['', Validators.required]
 
