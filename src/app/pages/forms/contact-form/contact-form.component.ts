@@ -27,14 +27,16 @@ import {merge} from 'rxjs';
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.css'
 })
+
+
 export class ContactFormComponent {
 
 
   contactForm: FormGroup;
 
-  readonly metPago = new FormControl('', [Validators.required]);
 
-  errorMessage = signal('');
+  errorMessageEmail = signal('');
+  errorMessageToggle = signal('');
 
   constructor(private fb: FormBuilder) {
 
@@ -51,7 +53,8 @@ export class ContactFormComponent {
 
 
 
-      mensaje: ['', Validators.required]
+      mensaje: ['', Validators.required],
+      metodoPago: ['', Validators.required] // Asegúrate de que este control esté definido
 
     });
     merge(
@@ -64,24 +67,50 @@ export class ContactFormComponent {
       this.contactForm.get('enlace')!.statusChanges,
       this.contactForm.get('enlace')!.valueChanges,
       this.contactForm.get('mensaje')!.statusChanges,
-      this.contactForm.get('mensaje')!.valueChanges
+      this.contactForm.get('mensaje')!.valueChanges,
+      this.contactForm.get('metodoPago')!.valueChanges,
+      
     )
     .pipe(takeUntilDestroyed())
-    .subscribe(() => this.updateErrorMessage());
+    .subscribe(() => this.updateErrorMessage(""));
   }
   ngOnInit(): void {}
 
 
-  updateErrorMessage() {
-    const emailControl = this.contactForm.get('email');
-    if (emailControl && emailControl.hasError('required')) {
-      this.errorMessage.set('Tienes que ingresar un valor válido');
-    } else if (emailControl && emailControl.hasError('email')) {
-      this.errorMessage.set('No es un correo válido');
-    } else {
-      this.errorMessage.set('');
+  updateErrorMessage(tipo: String) {
+    
+    switch(tipo){
+      case 'email':
+        const emailControl = this.contactForm.get('email');
+        if (emailControl && emailControl.hasError('required')) {
+          this.errorMessageEmail.set('Tienes que ingresar un valor válido');
+        } else if (emailControl && emailControl.hasError('email')) {
+          this.errorMessageEmail.set('No es un correo válido');
+        } else {
+          this.errorMessageEmail.set('');
+        }
+        break;
+      case 'metodoPago':
+        const metodoPagoControl = this.contactForm.get('metodoPago');
+        if (metodoPagoControl && metodoPagoControl.hasError('required')) {
+          this.errorMessageToggle.set('Tienes que ingresar un valor válido');
+        } else if (metodoPagoControl?.value == null) {
+          this.errorMessageToggle.set('No es un metodo válido');
+        } else {
+          this.errorMessageToggle.set('');
+        }
     }
   }
+
+
+
+  
+
+
+
+
+
+
 
   onSubmit(): void {
 
@@ -95,8 +124,8 @@ export class ContactFormComponent {
       const whatsappUrl = this.createWhatsappUrl('+59177731800', enlace, mensaje);
       window.open(whatsappUrl, '_blank');
     }
-
   }
+
   createWhatsappUrl(telefono: string, enlace: string, mensaje: string): string {
     const baseUrl = 'https://api.whatsapp.com/send';
     const phoneParam = `phone=${telefono}`;

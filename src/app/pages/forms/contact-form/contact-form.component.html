@@ -20,11 +20,11 @@
               <input
                 matInput
                 formControlName="email"
-                (blur)="updateErrorMessage()"
+                (blur)="updateErrorMessage('email')"
                 required
               />
               @if (contactForm.get('email')?.invalid) {
-                <mat-error>{{errorMessage()}}</mat-error>
+                <mat-error>{{errorMessageEmail()}}</mat-error>
               }
 
               <mat-icon matSuffix>mail</mat-icon>
@@ -50,17 +50,18 @@
           </p>
 
           <p>
+          
             <mat-button-toggle-group
-            [formControl]="metPago"
+            [formControl]="$any(contactForm.get('metodoPago'))"
             aria-label="Metodo de Pago"
-            (blur)="updateErrorMessage()"
+            (blur)="updateErrorMessage('metodoPago')"
             >
               <mat-button-toggle value="bold">Efectivo</mat-button-toggle>
               <mat-button-toggle value="italic">QR</mat-button-toggle>
               <mat-button-toggle value="underline">Tarjeta debito/credito</mat-button-toggle>
               <mat-button-toggle value="underline">PayPal</mat-button-toggle>
             </mat-button-toggle-group>
-            <mat-error>{{errorMessage()}}</mat-error>
+            <mat-error>{{errorMessageToggle()}}</mat-error>
           </p>
 
           <p>
