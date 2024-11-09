@@ -50,23 +50,27 @@
           </p>
 
           <p>
-          
+
             <mat-button-toggle-group
             [formControl]="$any(contactForm.get('metodoPago'))"
             aria-label="Metodo de Pago"
+
+            [id]="classnametoggle"
+            formControlName="metodoPago"
             (blur)="updateErrorMessage('metodoPago')"
+            (click)="updateState()"
             >
-              <mat-button-toggle value="bold">Efectivo</mat-button-toggle>
-              <mat-button-toggle value="italic">QR</mat-button-toggle>
-              <mat-button-toggle value="underline">Tarjeta debito/credito</mat-button-toggle>
-              <mat-button-toggle value="underline">PayPal</mat-button-toggle>
+            <mat-button-toggle [style]="styleToggleItem" value="bold">Efectivo</mat-button-toggle>
+            <mat-button-toggle [style]="styleToggleItem" value="underline">Tarjeta debito/credito</mat-button-toggle>
+            <mat-button-toggle [style]="styleToggleItem" value="underline">PayPal</mat-button-toggle>
+            <mat-button-toggle [style]="styleToggleItem" value="italic">QR</mat-button-toggle>
             </mat-button-toggle-group>
             <mat-error>{{errorMessageToggle()}}</mat-error>
           </p>
 
           <p>
 
-            <mat-form-field appearance="outline" class="formField" id="f5">
+            <mat-form-field appearance="outline" class="formField" id="f6">
               <textarea matInput placeholder="Mensaje" formControlName="mensaje"></textarea>
             </mat-form-field>
           </p>

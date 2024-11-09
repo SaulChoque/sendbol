@@ -38,6 +38,9 @@ export class ContactFormComponent {
   errorMessageEmail = signal('');
   errorMessageToggle = signal('');
 
+  classnametoggle: String = 'toggle';
+  styleToggleItem: String = 'color: var(--mat-standard-button-toggle-text-color, var(--mat-app-on-surface));';
+
   constructor(private fb: FormBuilder) {
 
 
@@ -68,8 +71,9 @@ export class ContactFormComponent {
       this.contactForm.get('enlace')!.valueChanges,
       this.contactForm.get('mensaje')!.statusChanges,
       this.contactForm.get('mensaje')!.valueChanges,
+      this.contactForm.get('metodoPago')!.statusChanges,
       this.contactForm.get('metodoPago')!.valueChanges,
-      
+
     )
     .pipe(takeUntilDestroyed())
     .subscribe(() => this.updateErrorMessage(""));
@@ -78,7 +82,7 @@ export class ContactFormComponent {
 
 
   updateErrorMessage(tipo: String) {
-    
+
     switch(tipo){
       case 'email':
         const emailControl = this.contactForm.get('email');
@@ -102,9 +106,15 @@ export class ContactFormComponent {
     }
   }
 
+  updateState(){
+    this.classnametoggle = 'toggle';
+    this.styleToggleItem = 'color: var(--mat-standard-button-toggle-text-color, var(--mat-app-on-surface));';
+    this.errorMessageToggle.set('');
+  }
 
 
-  
+
+
 
 
 
@@ -123,6 +133,14 @@ export class ContactFormComponent {
 
       const whatsappUrl = this.createWhatsappUrl('+59177731800', enlace, mensaje);
       window.open(whatsappUrl, '_blank');
+    }
+    else {
+      if(this.contactForm.get('metodoPago')?.valid == false){
+        this.classnametoggle = 'invalid-form';
+        this.styleToggleItem = 'color: var(--mat-form-field-error-trailing-icon-color, var(--mat-app-error));';
+      }
+      this.updateErrorMessage('email');
+      this.updateErrorMessage('metodoPago');
     }
   }
 
