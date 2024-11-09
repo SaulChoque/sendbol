@@ -25,7 +25,7 @@ import {merge} from 'rxjs';
 
   ],
   templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.css'
+  styleUrl: './contact-form.component.scss'
 })
 
 
@@ -78,7 +78,10 @@ export class ContactFormComponent {
     .pipe(takeUntilDestroyed())
     .subscribe(() => this.updateErrorMessage(""));
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.scrollToTop();
+
+  }
 
 
   updateErrorMessage(tipo: String) {
@@ -151,4 +154,10 @@ export class ContactFormComponent {
     console.log('URL LO; '+`${baseUrl}?${phoneParam}&${textParam}`);
     return `${baseUrl}?${phoneParam}&${textParam}`;
   }
+
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 }

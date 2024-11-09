@@ -1,7 +1,7 @@
 
 <div class="body-landing">
 
-
+  <!-- CMMT COMPU VERSION-->
   @if(currentBreakpoint == breakpoints.Large || currentBreakpoint == breakpoints.Medium){
     <div id="lnd1" class="app-landing-item-PC">
 
@@ -220,18 +220,19 @@
 
 
 
+  <div class="landItem" id="lnd1">
+    <app-landing-item
+      [item]="landingintems[0]"
+    >
+    </app-landing-item>
+  </div>
 
-  <app-landing-item
-    [item]="landingintems[0]"
-  >
-  </app-landing-item>
+  
+
+
+
   <app-landing-item
     [item]="landingintems[1]"
   >
   </app-landing-item>
-  <app-landing-item
-    [item]="landingintems[2]"
-  >
-  </app-landing-item>
 </div>
-K

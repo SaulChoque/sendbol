@@ -14,7 +14,7 @@ import { Breakpoints } from '@angular/cdk/layout';
   standalone: true,
   imports: [LandingComponent, LandingItemComponent, RouterModule, MatIconModule],
   templateUrl: './landing.component.html',
-  styleUrl: './landing.component.css'
+  styleUrl: './landing.component.scss'
 })
 export class LandingComponent {
 

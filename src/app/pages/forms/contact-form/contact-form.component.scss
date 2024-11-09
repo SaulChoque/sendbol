@@ -1,0 +1,144 @@
+.formCard{
+    max-width: 450px;
+}
+
+.body{
+    display: flex;
+    padding: 1em;
+    background: linear-gradient(-45deg, #1d1d1e, #0F1315,  #191e23, #0F1315);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.formField{
+    width: 400px;
+}
+
+
+.formContainer {
+  display: flex;
+  position: sticky;
+  top: 20px;
+  flex: 0 0 25%; /* Ocupa el 25% izquierdo de la pantalla */
+  padding: 10px;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textContainer {
+  flex: 1; /* Ocupa el espacio restante */
+  padding: 10px; /* Opcional: agrega padding para separación */
+  position: relative; /* Asegúrate de que el contenedor sea relativo */
+}
+
+#invalid-form.mat-button-toggle-group-appearance-standard {
+  border: solid 1px var(--mat-form-field-error-trailing-icon-color, var(--mat-app-error));
+  color: var(--mat-form-field-error-trailing-icon-color, var(--mat-app-error));
+}
+
+mat-hint {
+  color: white;
+}
+
+.svg-icon-container {
+  position: absolute; /* Cambia a absolute para posicionar dentro de textContainer */
+  color: var(--primary-color-text, var(--mat-text-color)); 
+}
+
+#svgc1.svg-icon-container {
+  animation: mover 20s infinite;
+}
+
+@keyframes mover {
+  0% {
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    transform: rotate(0deg);
+  }
+  24% {
+    right: 0px;
+    left: calc(100% - 270px); /* Ajusta el valor según el tamaño del SVG */
+    bottom: calc(100% - 270px); /* Ajusta el valor según el tamaño del SVG */
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    right: 0px;
+    left: calc(100% - 270px); /* Ajusta el valor según el tamaño del SVG */
+    bottom: calc(100% - 270px); /* Ajusta el valor según el tamaño del SVG */
+    transform: rotate(225deg);
+  }
+  
+  49% {
+    right: calc(100% - 270px);
+    left: 0; /* Ajusta el valor según el tamaño del SVG */
+    bottom: calc(100% - 270px); /* Ajusta el valor según el tamaño del SVG */
+    transform: rotate(225deg);
+  }
+
+  50% {
+    right: calc(100% - 270px);
+    left: 0; /* Ajusta el valor según el tamaño del SVG */
+    bottom: calc(100% - 270px); /* Ajusta el valor según el tamaño del SVG */
+    transform: rotate(80deg);
+  }
+
+  74% {
+    right: 0;
+    left: calc(100% - 270px); /* Ajusta el valor según el tamaño del SVG */
+    bottom: 0; /* Ajusta el valor según el tamaño del SVG */
+    transform: rotate(80deg);
+  }
+
+  75% {
+    right: 0;
+    left: calc(100% - 270px); /* Ajusta el valor según el tamaño del SVG */
+    bottom: 0; /* Ajusta el valor según el tamaño del SVG */
+    transform: rotate(225deg);
+  }
+
+  98% {
+    right: calc(100% - 270px);
+    left: 0; /* Ajusta el valor según el tamaño del SVG */
+    bottom: 0; /* Ajusta el valor según el tamaño del SVG */
+    transform: rotate(225deg);
+  }
+
+  99% {
+    right: calc(100% - 270px);
+    left: 0; /* Ajusta el valor según el tamaño del SVG */
+    bottom: 0; /* Ajusta el valor según el tamaño del SVG */
+    transform: rotate(10deg);
+  }
+
+  100% {
+    right: 0;
+    left: 0; /* Ajusta el valor según el tamaño del SVG */
+    bottom: 0; /* Ajusta el valor según el tamaño del SVG */
+    transform: rotate(0deg);
+  }
+
+
+
+
+
+
+}
+
+
+
+
