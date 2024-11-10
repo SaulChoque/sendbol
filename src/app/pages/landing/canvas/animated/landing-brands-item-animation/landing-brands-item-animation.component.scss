@@ -1,0 +1,206 @@
+
+#landBrands.app-landing-item-PC{
+  justify-content: space-around;
+}
+
+#tlt3.titleitem{
+  padding: 0;
+}
+
+[data-aos="svgc2"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateX(-200px) rotate(0deg);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(0px) rotate(90deg);
+    opacity: 1;
+  }
+}
+
+
+[data-aos="svgc2-amz"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateX(-200px) translateY(100px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(0px) translateY(0px);
+    opacity: 1;
+  }
+}
+
+[data-aos="svgc2-ebay"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateX(-200px) translateY(0px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(100px) translateY(-30px);
+    opacity: 1;
+  }
+}
+
+[data-aos="svgc2-ets"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateX(-200px) translateY(-50px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(-50px) translateY(-60px);
+    opacity: 1;
+  }
+}
+
+[data-aos="svgc2-shn"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateX(-200px) translateY(-100px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(0px) translateY(-50px);
+    opacity: 1;
+  }
+}
+
+
+
+
+#svgc2.svgItem {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  animation: svg 4s infinite, movesvgc2 1s forwards; /* Agrega múltiples animaciones aquí */
+}
+@keyframes movesvgc2 {
+  0%   {right: 100px; transform: rotate(25deg);}
+  100%   {right: 0px; transform: rotate(0deg);}
+}
+
+
+
+
+
+.app-landing-item-PC h1{
+  font-size: 7em;
+  font-family: 'Abel';
+  margin-bottom: -40px;
+}
+.app-landing-item-PC h2{
+  font-size: 6em;
+  font-family: 'Abel';
+  margin-bottom: -40px;
+}
+.app-landing-item-PC h3{
+  font-size: 5em;
+  font-family: 'Abel';
+  margin-bottom: -40px;
+}
+
+
+
+.app-landing-item-CEL{
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+
+
+.app-landing-item-CEL h1{
+  font-size: 5em;
+  font-family: 'Abel';
+
+}
+.app-landing-item-CEL h2{
+  font-size: 4em;
+  font-family: 'Abel';
+}
+.app-landing-item-CEL h3{
+  font-size: 3em;
+  font-family: 'Abel';
+}
+
+#tlt3CEL.titleitem h1{
+  margin-bottom: -30px;
+
+}
+#tlt3CEL.titleitem h2{
+  margin-bottom: -30px;
+}
+#tlt3CEL.titleitem h3{
+  margin-bottom: -20px;
+}
+
+
+
+[data-aos="svgc2-CEL-amz"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(100px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
+  }
+}
+
+[data-aos="svgc2-CEL-ebay"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(0px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(50px) translateX(50px);
+    opacity: 1;
+  }
+}
+
+[data-aos="svgc2-CEL-ets"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(-50px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(-70px) translateX(-60px);
+    opacity: 1;
+  }
+}
+
+[data-aos="svgc2-CEL-shn"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(-100px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(-10px) translateX(-50px);
+    opacity: 1;
+  }
+}
+
+.landItem{
+  display: flex;
+  align-items: center;
+}
+
+#lndCel.landItem{
+  flex-direction: column-reverse;
+}

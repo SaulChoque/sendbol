@@ -8,6 +8,7 @@ import { SocialMedia } from './socialmedia';
 import { svgs } from './svgs';
 import { Article } from './article';
 import { SizesFlagAnimation } from './sizesFlagAnimation';
+import { SizesBrandAnimation } from './sizesBrandAnimation';
 
 
 export const Images = {
@@ -280,6 +281,11 @@ export const SOCIALMEDIA: SocialMedia[] = [
   },
 ];
 
+
+//CMMT SIZES SVG ANIMATIONS
+//--------------------------------
+//CMMT SIZES FLAGS
+//--------------------------------
 export const FLAGSIZES: SizesFlagAnimation[] = [
   {
     screenType: 'Computer',
@@ -297,6 +303,33 @@ export const FLAGSIZES: SizesFlagAnimation[] = [
     bolFlag: '150px',
     sync: '100px',
   },
+  
+];
+//--------------------------------
+//CMMT SIZES BRANDS
+//--------------------------------
+
+export const BRANDSIZES: SizesBrandAnimation[] = [
+  {
+    screenType: 'Computer',
+    div: '',
+    cart: '200px',
+    amazon: '100px',
+    ebay: '300px',
+    etsy: '120px',
+    shein: '300px',
+  },
+
+  {
+    screenType: 'Phone',
+    div: '',
+    cart: '150px',
+    amazon: '70px',
+    ebay: '150px',
+    etsy: '70px',
+    shein: '150px',
+  },
+
 
 ];
 
