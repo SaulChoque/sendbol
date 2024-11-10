@@ -23,20 +23,36 @@
 }
 
 .formField{
-    width: 400px;
+  width: 400px;
 }
+
+.formFieldCel{
+  width: 300px;
+}
+
+
 
 
 .formContainer {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#formcontComp.formContainer {
   position: sticky;
   top: 20px;
   flex: 0 0 25%; /* Ocupa el 25% izquierdo de la pantalla */
   padding: 10px;
   align-self: flex-start;
-  align-items: center;
-  justify-content: space-between;
 }
+#formcontCel.formContainer {
+
+}
+
+
+
+
 
 .textContainer {
   flex: 1; /* Ocupa el espacio restante */
@@ -55,7 +71,7 @@ mat-hint {
 
 .svg-icon-container {
   position: absolute; /* Cambia a absolute para posicionar dentro de textContainer */
-  color: var(--primary-color-text, var(--mat-text-color)); 
+  color: var(--primary-color-text, var(--mat-text-color));
 }
 
 #svgc1.svg-icon-container {
@@ -75,14 +91,14 @@ mat-hint {
     bottom: calc(100% - 270px); /* Ajusta el valor según el tamaño del SVG */
     transform: rotate(0deg);
   }
-  
+
   25% {
     right: 0px;
     left: calc(100% - 270px); /* Ajusta el valor según el tamaño del SVG */
     bottom: calc(100% - 270px); /* Ajusta el valor según el tamaño del SVG */
     transform: rotate(225deg);
   }
-  
+
   49% {
     right: calc(100% - 270px);
     left: 0; /* Ajusta el valor según el tamaño del SVG */

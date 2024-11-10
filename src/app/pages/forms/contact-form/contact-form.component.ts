@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal, Input } from '@angular/core';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
@@ -7,6 +7,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormControl, FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MediaQueryService } from '../../../services/media-query.service';
+import { Breakpoints } from '@angular/cdk/layout';
+
 
 import {merge} from 'rxjs';
 
@@ -31,6 +34,10 @@ import {merge} from 'rxjs';
 
 export class ContactFormComponent {
 
+  @Input()
+  breakpoints = Breakpoints;
+  currentBreakpoint?: string;
+  currentWidth?: string;
 
   contactForm: FormGroup;
 
@@ -41,7 +48,7 @@ export class ContactFormComponent {
   classnametoggle: String = 'toggle';
   styleToggleItem: String = 'color: var(--mat-standard-button-toggle-text-color, var(--mat-app-on-surface));';
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private mediaQueryService: MediaQueryService,) {
 
 
     this.contactForm = this.fb.group({
@@ -80,6 +87,14 @@ export class ContactFormComponent {
   }
   ngOnInit(): void {
     this.scrollToTop();
+
+    this.mediaQueryService.breakpoint$.subscribe(() => {
+      this.mediaQueryService.triggerProcesses();
+      this.currentBreakpoint = this.mediaQueryService.returnBreakpoint();
+    });
+    this.currentWidth = this.mediaQueryService.returnWidth();
+    //console.log(this.constantes.IMGBAN001);
+
 
   }
 

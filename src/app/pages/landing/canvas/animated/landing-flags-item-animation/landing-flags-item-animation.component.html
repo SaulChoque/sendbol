@@ -1,5 +1,5 @@
-<div 
-class="landflags" 
+<div
+class="landflags"
 [style]="currentSizes.div">
 
   <!--CMMT SVG WORLD MATERIAL ICON-->
@@ -13,7 +13,7 @@ class="landflags"
   </div>
 
   <!--CMMT SVG USA FLAG-->
-  <div data-aos="aos-usaFlag" class="svgItem" id="usaFlag">
+  <div [attr.data-aos]="currentVariablesUSA" class="svgItem" id="usaFlag">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" [attr.height]="currentSizes.usaFlag">
       <defs/>
       <path fill="#b22234" d="M8,195.25 C178.83,110.03 349.03,140.83 521.26,167.28 C676.47,191.12 833.42,211.85 992,132.75 L992,804.75 C821.17,889.97 650.97,859.17 478.74,832.72 C323.53,808.88 166.58,788.15 8,867.25 L8,195.25"/>
@@ -75,7 +75,7 @@ class="landflags"
   </div>
 
   <!--CMMT SVG BOLIVIA FLAG-->
-  <div data-aos="aos-bolFlag" class="svgItem" id="bolFlag">
+  <div [attr.data-aos]="currentVariablesBOL" class="svgItem" id="bolFlag">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" [attr.height]="currentSizes.bolFlag">
       <defs/>
       <path fill="#007934" d="M8,195.25 C178.83,110.03 349.03,140.83 521.26,167.28 C676.47,191.12 833.42,211.85 992,132.75 L992,804.75 C821.17,889.97 650.97,859.17 478.74,832.72 C323.53,808.88 166.58,788.15 8,867.25 L8,195.25"/>
@@ -86,7 +86,7 @@ class="landflags"
   </div>
 
   <!--CMMT SVG SYNC ARROWS MATERIAL ICON-->
-  <div data-aos="aos-sync" class="svgItem" id="sync">
+  <div data-aos="aos-sync" class="svgItem" [id]="currentVariablesSYNC">
     <div class="svgSubItem" id="sync">
       <svg xmlns="http://www.w3.org/2000/svg" [attr.height]="currentSizes.sync" viewBox="0 -960 960 960" fill="#e8eaed">
         <path d="M160-160v-80h110l-16-14q-52-46-73-105t-21-119q0-111 66.5-197.5T400-790v84q-72 26-116 88.5T240-478q0 45 17 87.5t53 78.5l10 10v-98h80v240H160Zm400-10v-84q72-26 116-88.5T720-482q0-45-17-87.5T650-648l-10-10v98h-80v-240h240v80H690l16 14q49 49 71.5 106.5T800-482q0 111-66.5 197.5T560-170Z"/>

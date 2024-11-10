@@ -28,9 +28,9 @@ export class LandingFlagsItemAnimationComponent {
   constructor(
     private mediaQueryService: MediaQueryService,
   ) {}
-  
-  
-  
+
+
+
   @Input()
   breakpoints = Breakpoints;
   currentBreakpoint?: string;
@@ -60,21 +60,30 @@ export class LandingFlagsItemAnimationComponent {
     switch(this.currentBreakpoint){
       case Breakpoints.Large:
         this.currentSizes = this.flagsizes[0];
-        this.currentVariablesUSA = "aos-usaFlag-cel";
-        this.currentVariablesBOL = "";
-        this.currentVariablesSYNC = "";
+        this.currentVariablesUSA = "aos-usaFlag-pc";
+        this.currentVariablesBOL = "aos-bolFlag-pc";
+        this.currentVariablesSYNC = "sync-pc";
         break;
       case Breakpoints.Medium:
         this.currentSizes = this.flagsizes[0];
+        this.currentVariablesUSA = "aos-usaFlag-pc";
+        this.currentVariablesBOL = "aos-bolFlag-pc";
+        this.currentVariablesSYNC = "sync-pc";
         break;
-      
+
       case Breakpoints.Small:
         this.currentSizes = this.flagsizes[1];
+        this.currentVariablesUSA = "aos-usaFlag-cel";
+        this.currentVariablesBOL = "aos-bolFlag-cel";
+        this.currentVariablesSYNC = "sync-cel";
         console.log("Celular");
         break;
-      
+
       case Breakpoints.XSmall:
         this.currentSizes = this.flagsizes[1];
+        this.currentVariablesUSA = "aos-usaFlag-cel";
+        this.currentVariablesBOL = "aos-bolFlag-cel";
+        this.currentVariablesSYNC = "sync-cel";
         console.log("Celular");
         break;
     }

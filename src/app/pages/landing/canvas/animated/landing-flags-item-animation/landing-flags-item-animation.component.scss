@@ -37,7 +37,7 @@
   }
 }
 
-[data-aos="aos-usaFlag"] {
+[data-aos="aos-usaFlag-pc"] {
   position: relative;
   transform: translateX(-600px);
   opacity: 0;
@@ -48,13 +48,36 @@
   }
 }
 
-[data-aos="aos-bolFlag"] {
+[data-aos="aos-bolFlag-pc"] {
   position: relative;
   transform: translateX(-200px) translateY(200px);
   opacity: 0;
   transition-property: transform, opacity;
   &.aos-animate {
     transform: translateX(-350px) translateY(200px);
+    opacity: 1;
+  }
+}
+
+
+[data-aos="aos-usaFlag-cel"] {
+  position: relative;
+  transform: translateX(-550px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(-350px);
+    opacity: 1;
+  }
+}
+
+[data-aos="aos-bolFlag-cel"] {
+  position: relative;
+  transform: translateX(-200px) translateY(200px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(-300px) translateY(200px);
     opacity: 1;
   }
 }
@@ -71,8 +94,40 @@
   }
 }
 */
-#sync.svgItem{
-  animation: rottate 15s infinite;
+#sync-cel.svgItem{
+  animation: rottateCel 15s infinite;
+}
+
+#sync-pc.svgItem{
+  animation: rottatePc 15s infinite;
+}
+
+@keyframes rottateCel {
+  0% {
+    right: 525px;
+    bottom: -125px;
+
+  }
+  100% {
+    right: 525px;
+    bottom: -125px;
+
+
+  }
+}
+
+@keyframes rottatePc {
+  0% {
+    right: 675px;
+    bottom: -125px;
+
+  }
+  100% {
+    right: 675px;
+    bottom: -125px;
+
+
+  }
 }
 
 #sync.svgSubItem{
@@ -91,16 +146,4 @@
 
   }
 }
-@keyframes rottate {
-  0% {
-    right: 675px;
-    bottom: -125px;
 
-  }
-  100% {
-    right: 675px;
-    bottom: -125px;
-
-
-  }
-}
