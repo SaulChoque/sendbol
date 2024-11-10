@@ -12,3 +12,5 @@ bootstrapApplication(AppComponent, {
 
 //CMD IMPORTANT
 ng build --configuration production --base-href ./
+
+ng generate component pages/landing/canvas/animated/landing-flags-item-animation

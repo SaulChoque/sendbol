@@ -7,6 +7,7 @@ import { landingItem } from './landingItem';
 import { SocialMedia } from './socialmedia';
 import { svgs } from './svgs';
 import { Article } from './article';
+import { SizesFlagAnimation } from './sizesFlagAnimation';
 
 
 export const Images = {
@@ -277,6 +278,24 @@ export const SOCIALMEDIA: SocialMedia[] = [
     name: 'twitter',
     url: 'twitter',
   },
+];
+
+export const FLAGSIZES: SizesFlagAnimation[] = [
+  {
+    screenType: 'Computer',
+    world: '400px',
+    usaFlag: '200px',
+    bolFlag: '200px',
+    sync: '150px',
+  },
+  {
+    screenType: 'Phone',
+    world: '300px',
+    usaFlag: '100px',
+    bolFlag: '100px',
+    sync: '50px',
+  },
+
 ];
 
 export const SizesConstants = {

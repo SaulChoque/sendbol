@@ -5,7 +5,7 @@
   position: relative;
 }
 .body-landing{
- 
+
   padding: 1em;
   background: linear-gradient(-45deg, #000, #0F1315,  #191e23, #1d1d1e);
   background-size: 400% 400%;
@@ -112,7 +112,7 @@
   position: relative;
   transform: translateX(-200px) translateY(100px);
   opacity: 0;
-  
+
   transition-property: transform, opacity;
   &.aos-animate {
     transform: translateX(0px) translateY(0px);
@@ -137,7 +137,7 @@
   position: relative;
   transform: translateX(-200px) translateY(-50px);
   opacity: 0;
-  
+
   transition-property: transform, opacity;
   &.aos-animate {
     transform: translateX(-50px) translateY(-60px);
@@ -150,7 +150,7 @@
   position: relative;
   transform: translateX(-200px) translateY(-100px);
   opacity: 0;
-  
+
   transition-property: transform, opacity;
   &.aos-animate {
     transform: translateX(0px) translateY(-50px);
@@ -208,7 +208,7 @@
 .app-landing-item-CEL h1{
   font-size: 5em;
   font-family: 'Abel';
-  
+
 }
 .app-landing-item-CEL h2{
   font-size: 4em;
@@ -221,7 +221,7 @@
 
 #tlt3CEL.titleitem h1{
   margin-bottom: -30px;
-  
+
 }
 #tlt3CEL.titleitem h2{
   margin-bottom: -30px;
@@ -237,7 +237,7 @@
   position: relative;
   transform: translateY(-200px) translateX(100px);
   opacity: 0;
-  
+
   transition-property: transform, opacity;
   &.aos-animate {
     transform: translateY(0px) translateX(0px);
@@ -262,7 +262,7 @@
   position: relative;
   transform: translateY(-200px) translateX(-50px);
   opacity: 0;
-  
+
   transition-property: transform, opacity;
   &.aos-animate {
     transform: translateY(-70px) translateX(-60px);
@@ -275,7 +275,7 @@
   position: relative;
   transform: translateY(-200px) translateX(-100px);
   opacity: 0;
-  
+
   transition-property: transform, opacity;
   &.aos-animate {
     transform: translateY(-10px) translateX(-50px);
@@ -283,3 +283,10 @@
   }
 }
 
+.landItem{
+  display: flex;
+}
+
+#lndCel.landItem{
+  flex-direction: column-reverse;
+}

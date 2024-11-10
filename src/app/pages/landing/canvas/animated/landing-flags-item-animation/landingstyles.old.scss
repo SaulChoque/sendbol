@@ -1,0 +1,66 @@
+.landflags{
+  display: flex;
+  position: relative;
+  height: 500px;
+  width: 500px;
+  padding: 1%;
+}
+
+.svgItem{
+  position: relative;
+}
+
+#world.svgItem{
+  color: var(--primary-color-text, var(--mat-text-color));
+}
+
+#usaFlag.svgItem{
+  animation: moveusader 1s forwards;
+}
+
+@keyframes moveusader {
+  0% {
+    left: -600px;
+
+  }
+  100% {
+    left: -450px;
+  }
+}
+
+
+#bolFlag.svgItem{
+  animation: movebolizq 1s forwards;
+}
+
+@keyframes movebolizq {
+  0% {
+    right: 200px;
+    bottom: -200px;
+  }
+  100% {
+    right: 350px;
+    bottom: -200px;
+  }
+}
+
+#sync.svgItem{
+
+  animation: svg 4s infinite, movecenter 1s forwards;
+}
+
+
+@keyframes movecenter {
+  0% {
+    right: 675px;
+    bottom: -125px;
+  }
+  100% {
+    right: 675px;
+    bottom: -125px;
+  }
+}
+
+#sync.svgItem{
+  color: var(--primary-color-text, var(--mat-text-color));
+}

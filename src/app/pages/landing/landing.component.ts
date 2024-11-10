@@ -1,18 +1,28 @@
 import { Component, Input } from '@angular/core';
-import { landingItem } from '../../models/landingItem';
-import { LandingItemComponent } from "./landing-item/landing-item.component";
-import { LANDINGITEMS } from '../../models/constants';
-import { bootstrapApplication } from '@angular/platform-browser';
-import { Router, RouterModule } from '@angular/router';
-import {MatIconModule} from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
+//CMMT Breakpoints services
 import { MediaQueryService } from '../../services/media-query.service';
 import { Breakpoints } from '@angular/cdk/layout';
+
+//CMMT Importacion de constantes
+import { LANDINGITEMS } from '../../models/constants';
+
+//CMMT Importacion de componentes
+import { LandingItemComponent } from "./landing-item/landing-item.component";
+import { LandingFlagsItemAnimationComponent } from './canvas/animated/landing-flags-item-animation/landing-flags-item-animation.component';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [LandingComponent, LandingItemComponent, RouterModule, MatIconModule],
+  imports: [
+    LandingComponent,
+    LandingItemComponent,
+    LandingFlagsItemAnimationComponent,
+    RouterModule,
+    MatIconModule,
+  ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })

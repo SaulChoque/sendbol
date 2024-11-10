@@ -1,0 +1,107 @@
+.landflags{
+  display: flex;
+  position: relative;
+  height: 500px;
+  width: 500px;
+  padding: 1%;
+}
+
+.svgItem{
+  position: relative;
+}
+
+
+#world.svgItem{
+  animation: colors 7s infinite;
+}
+
+@keyframes colors {
+  0%   {color: #135d8e;}
+  14%  {color: #ccd3d1;}
+  28%  {color: #1a74b2;}
+  42%  {color: #125485;}
+  56%  {color: #5595b3;}
+  70%   {color: #5f97bb;}
+  84%   {color: #285d4c;}
+  100%   {color: #477555;}
+}
+
+
+[data-aos="aos-world"] {
+  color: var(--primary-color-text, var(--mat-text-color)); /* Cambia el color aquí */
+  position: relative;
+
+  opacity: 0;
+  transition-property: opacity;
+  &.aos-animate {
+    opacity: 1;
+  }
+}
+
+[data-aos="aos-usaFlag"] {
+  position: relative;
+  transform: translateX(-600px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(-400px);
+    opacity: 1;
+  }
+}
+
+[data-aos="aos-bolFlag"] {
+  position: relative;
+  transform: translateX(-200px) translateY(200px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(-350px) translateY(200px);
+    opacity: 1;
+  }
+}
+/*
+[data-aos="aos-sync"] {
+  color: white;
+  position: relative;
+  transform: translateX(-675px) translateY(125px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(-675px) translateY(125px);
+    opacity: 1;
+  }
+}
+*/
+#sync.svgItem{
+  animation: rottate 15s infinite;
+}
+
+#sync.svgSubItem{
+  animation: rosate 7s infinite;
+  animation-timing-function: linear;
+}
+
+
+@keyframes rosate {
+  0% {
+    transform: rotate(0deg);
+
+  }
+  100% {
+    transform: rotate(360deg);
+
+  }
+}
+@keyframes rottate {
+  0% {
+    right: 675px;
+    bottom: -125px;
+
+  }
+  100% {
+    right: 675px;
+    bottom: -125px;
+
+
+  }
+}
