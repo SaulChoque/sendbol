@@ -283,6 +283,7 @@ export const SOCIALMEDIA: SocialMedia[] = [
 export const FLAGSIZES: SizesFlagAnimation[] = [
   {
     screenType: 'Computer',
+    div: 'height: 500px; width: 500px;',
     world: '400px',
     usaFlag: '200px',
     bolFlag: '200px',
@@ -290,10 +291,11 @@ export const FLAGSIZES: SizesFlagAnimation[] = [
   },
   {
     screenType: 'Phone',
-    world: '300px',
-    usaFlag: '100px',
-    bolFlag: '100px',
-    sync: '50px',
+    div: 'height: 360px; width: 360px;',
+    world: '350px',
+    usaFlag: '150px',
+    bolFlag: '150px',
+    sync: '100px',
   },
 
 ];

@@ -18,17 +18,23 @@ import { Breakpoints } from '@angular/cdk/layout';
 
 
 export class LandingFlagsItemAnimationComponent {
-  currentSizes = new SizesFlagAnimation();
+  flagsizes = [...FLAGSIZES];
+
+  currentVariablesUSA: String = "";
+  currentVariablesBOL: String = "";
+  currentVariablesSYNC: String = "";
+
+
   constructor(
     private mediaQueryService: MediaQueryService,
   ) {}
-
-
-  flagsizes = [...FLAGSIZES];
-
+  
+  
+  
   @Input()
   breakpoints = Breakpoints;
   currentBreakpoint?: string;
+  currentSizes = new SizesFlagAnimation();
 
 
 
@@ -52,10 +58,22 @@ export class LandingFlagsItemAnimationComponent {
     //CMMT flagSizes[1]: CELULAR
 
     switch(this.currentBreakpoint){
-      case Breakpoints.Large || Breakpoints.Medium:
+      case Breakpoints.Large:
+        this.currentSizes = this.flagsizes[0];
+        this.currentVariablesUSA = "aos-usaFlag-cel";
+        this.currentVariablesBOL = "";
+        this.currentVariablesSYNC = "";
+        break;
+      case Breakpoints.Medium:
         this.currentSizes = this.flagsizes[0];
         break;
-      case Breakpoints.Small || Breakpoints.XSmall:
+      
+      case Breakpoints.Small:
+        this.currentSizes = this.flagsizes[1];
+        console.log("Celular");
+        break;
+      
+      case Breakpoints.XSmall:
         this.currentSizes = this.flagsizes[1];
         console.log("Celular");
         break;
