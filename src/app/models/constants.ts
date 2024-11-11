@@ -9,6 +9,7 @@ import { svgs } from './svgs';
 import { Article } from './article';
 import { SizesFlagAnimation } from './sizesFlagAnimation';
 import { SizesBrandAnimation } from './sizesBrandAnimation';
+import { SizesWelcomeAnimation } from './sizesWelcomeAnimation';
 
 
 export const Images = {
@@ -303,7 +304,7 @@ export const FLAGSIZES: SizesFlagAnimation[] = [
     bolFlag: '150px',
     sync: '100px',
   },
-  
+
 ];
 //--------------------------------
 //CMMT SIZES BRANDS
@@ -315,9 +316,9 @@ export const BRANDSIZES: SizesBrandAnimation[] = [
     div: '',
     cart: '200px',
     amazon: '100px',
-    ebay: '300px',
+    ebay: '120px',
     etsy: '120px',
-    shein: '300px',
+    shein: '62px',
   },
 
   {
@@ -325,11 +326,30 @@ export const BRANDSIZES: SizesBrandAnimation[] = [
     div: '',
     cart: '150px',
     amazon: '70px',
-    ebay: '150px',
+    ebay: '61px',
     etsy: '70px',
-    shein: '150px',
+    shein: '35px',
   },
+];
+//--------------------------------
+//CMMT SIZES WELCOME
+//--------------------------------
 
+export const WELCOMESIZES: SizesWelcomeAnimation[] = [
+  {
+    screenType: 'Computer',
+    div: '',
+    box: '150px',
+    cart: '150px',
+    logo: '350px',
+  },
+  {
+    screenType: 'Phone',
+    div: '',
+    box: '75px',
+    cart: '75px',
+    logo: '200px',
+  },
 
 ];
 

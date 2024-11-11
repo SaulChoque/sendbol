@@ -16,6 +16,7 @@ export class LandingBrandsItemAnimationComponent {
 
   brandsizes = [...BRANDSIZES];
 
+  currentVariableID: String = "";
   currentVariablesAMZ: String = "";
   currentVariablesEBAY: String = "";
   currentVariablesETSY: String = "";
@@ -77,14 +78,16 @@ export class LandingBrandsItemAnimationComponent {
 
   changeSizesPC(){
     this.currentSizes = this.brandsizes[0];
+    this.currentVariableID = "lndBrndPc";
     this.currentVariablesAMZ = "aos-amazon-pc";
     this.currentVariablesEBAY = "aos-ebay-pc";
     this.currentVariablesETSY = "aos-etsy-pc";
     this.currentVariablesSHEIN = "aos-shein-pc";
   }
-  
+
   changeSizesCEL(){
     this.currentSizes = this.brandsizes[1];
+    this.currentVariableID = "lndBrndCel";
     this.currentVariablesAMZ = "aos-amazon-cel";
     this.currentVariablesEBAY = "aos-ebay-cel";
     this.currentVariablesETSY = "aos-etsy-cel";
