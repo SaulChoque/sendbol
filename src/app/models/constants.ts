@@ -8,6 +8,8 @@ import { SocialMedia } from './socialmedia';
 import { svgs } from './svgs';
 import { Article } from './article';
 import { SizesFlagAnimation } from './sizesFlagAnimation';
+import { SizesBrandAnimation } from './sizesBrandAnimation';
+import { SizesWelcomeAnimation } from './sizesWelcomeAnimation';
 
 
 export const Images = {
@@ -280,6 +282,11 @@ export const SOCIALMEDIA: SocialMedia[] = [
   },
 ];
 
+
+//CMMT SIZES SVG ANIMATIONS
+//--------------------------------
+//CMMT SIZES FLAGS
+//--------------------------------
 export const FLAGSIZES: SizesFlagAnimation[] = [
   {
     screenType: 'Computer',
@@ -296,6 +303,52 @@ export const FLAGSIZES: SizesFlagAnimation[] = [
     usaFlag: '150px',
     bolFlag: '150px',
     sync: '100px',
+  },
+
+];
+//--------------------------------
+//CMMT SIZES BRANDS
+//--------------------------------
+
+export const BRANDSIZES: SizesBrandAnimation[] = [
+  {
+    screenType: 'Computer',
+    div: '',
+    cart: '200px',
+    amazon: '100px',
+    ebay: '120px',
+    etsy: '120px',
+    shein: '62px',
+  },
+
+  {
+    screenType: 'Phone',
+    div: '',
+    cart: '150px',
+    amazon: '70px',
+    ebay: '61px',
+    etsy: '70px',
+    shein: '35px',
+  },
+];
+//--------------------------------
+//CMMT SIZES WELCOME
+//--------------------------------
+
+export const WELCOMESIZES: SizesWelcomeAnimation[] = [
+  {
+    screenType: 'Computer',
+    div: '',
+    box: '150px',
+    cart: '150px',
+    logo: '350px',
+  },
+  {
+    screenType: 'Phone',
+    div: '',
+    box: '75px',
+    cart: '75px',
+    logo: '200px',
   },
 
 ];

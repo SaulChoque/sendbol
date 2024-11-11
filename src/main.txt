@@ -14,3 +14,5 @@ bootstrapApplication(AppComponent, {
 ng build --configuration production --base-href ./
 
 ng generate component pages/landing/canvas/animated/landing-flags-item-animation
+ng generate component pages/landing/canvas/animated/landing-brands-item-animation
+ng generate component pages/landing/canvas/animated/landing-welcome-item-animation

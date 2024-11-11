@@ -12,14 +12,16 @@ import { LANDINGITEMS } from '../../models/constants';
 //CMMT Importacion de componentes
 import { LandingItemComponent } from "./landing-item/landing-item.component";
 import { LandingFlagsItemAnimationComponent } from './canvas/animated/landing-flags-item-animation/landing-flags-item-animation.component';
-
+import { LandingBrandsItemAnimationComponent } from './canvas/animated/landing-brands-item-animation/landing-brands-item-animation.component';
+import { LandingWelcomeItemAnimationComponent } from './canvas/animated/landing-welcome-item-animation/landing-welcome-item-animation.component';
 @Component({
   selector: 'app-landing',
   standalone: true,
   imports: [
-    LandingComponent,
     LandingItemComponent,
     LandingFlagsItemAnimationComponent,
+    LandingBrandsItemAnimationComponent,
+    LandingWelcomeItemAnimationComponent,
     RouterModule,
     MatIconModule,
   ],

@@ -4,6 +4,7 @@
 
 .body{
     display: flex;
+    justify-content: center;
     padding: 1em;
     background: linear-gradient(-45deg, #1d1d1e, #0F1315,  #191e23, #0F1315);
     background-size: 400% 400%;
@@ -46,10 +47,6 @@
   padding: 10px;
   align-self: flex-start;
 }
-#formcontCel.formContainer {
-
-}
-
 
 
 

@@ -1,0 +1,220 @@
+
+
+/*====================================================*/
+/*CMMT TTL GENERAL*/
+/*====================================================*/
+
+.landBrands{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  overflow: hidden;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+/*CMMT EXPLN TITULO H1 H2 H3*/
+.titleitem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: var(--primary-color-text, var(--mat-text-color));
+}
+.titleitem h1, h2, h3{
+  font-family: 'Abel';
+}
+
+/*====================================================*/
+/*CMMT TTL VER PC*/
+/*====================================================*/
+
+#lndBrndPc.landBrands{
+  justify-content: space-around;
+}
+#lndBrndPc.landBrands span{
+  padding: 0;
+}
+
+/*----------------------------------------------------*/
+/*CMMT TTL ANIMACIONES PC*/
+/*----------------------------------------------------*/
+
+[data-aos="aos-cart"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateX(-200px) rotate(0deg);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(0px) rotate(90deg);
+    opacity: 1;
+  }
+}
+
+[data-aos="aos-amazon-pc"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateX(-200px) translateY(100px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(0px) translateY(0px);
+    opacity: 1;
+  }
+}
+
+[data-aos="aos-ebay-pc"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateX(-200px) translateY(0px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(100px) translateY(-30px);
+    opacity: 1;
+  }
+}
+
+[data-aos="aos-etsy-pc"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateX(-200px) translateY(-50px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(-50px) translateY(-60px);
+    opacity: 1;
+  }
+}
+
+[data-aos="aos-shein-pc"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateX(-200px) translateY(-100px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateX(0px) translateY(-50px);
+    opacity: 1;
+  }
+}
+
+/*----------------------------------------------------*/
+/*CMMT TTL TITULOS*/
+/*----------------------------------------------------*/
+
+#lndBrndPc.titleitem{
+  align-items: flex-end;
+}
+#lndBrndPc.titleitem h1{
+  font-size: 7em;
+  margin-bottom: -40px;
+}
+#lndBrndPc.titleitem h2{
+  font-size: 6em;
+  margin-bottom: -40px;
+}
+#lndBrndPc.titleitem h3{
+  font-size: 5em;
+  margin-bottom: -40px;
+}
+
+
+/*====================================================*/
+/*CMMT TTL VER CEL*/
+/*====================================================*/
+
+
+#lndBrndCel.landBrands{
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: flex;
+}
+
+#lndBrndCel.titleitem{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#lndBrndCel.titleitem h1{
+  font-size: 5em;
+  margin-bottom: -30px;
+
+}
+#lndBrndCel.titleitem h2{
+  font-size: 4em;
+  margin-bottom: -30px;
+}
+#lndBrndCel.titleitem h3{
+  font-size: 3em;
+  margin-bottom: -20px;
+}
+
+
+/*----------------------------------------------------*/
+/*CMMT TTL ANIMACIONES CEL*/
+/*----------------------------------------------------*/
+
+
+[data-aos="aos-amazon-cel"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(100px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(0px) translateX(25px);
+    opacity: 1;
+  }
+}
+
+[data-aos="aos-ebay-cel"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(0px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(50px) translateX(50px);
+    opacity: 1;
+  }
+}
+
+[data-aos="aos-etsy-cel"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(-50px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(-70px) translateX(-60px);
+    opacity: 1;
+  }
+}
+
+[data-aos="aos-shein-cel"] {
+  color: white; /* Cambia el color aquí */
+  position: relative;
+  transform: translateY(-200px) translateX(-100px);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  &.aos-animate {
+    transform: translateY(-10px) translateX(-50px);
+    opacity: 1;
+  }
+}

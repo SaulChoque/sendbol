@@ -1,7 +1,7 @@
 .landflags{
   display: flex;
   position: relative;
-
+  overflow: hidden;
   padding: 1%;
 }
 
@@ -142,7 +142,7 @@
 
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
 
   }
 }
