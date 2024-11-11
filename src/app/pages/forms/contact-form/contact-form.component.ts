@@ -9,7 +9,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { MediaQueryService } from '../../../services/media-query.service';
 import { Breakpoints } from '@angular/cdk/layout';
-
+import { urlValidator } from '../../../validators/url.validator';
 
 import {merge} from 'rxjs';
 
@@ -43,6 +43,8 @@ export class ContactFormComponent {
 
 
   errorMessageEmail = signal('');
+  errorMessageTelefono = signal('');
+  errorMessageEnlace = signal('');
   errorMessageToggle = signal('');
 
   classnametoggle: String = 'toggle';
@@ -59,7 +61,7 @@ export class ContactFormComponent {
 
       telefono: ['', Validators.required],
 
-      enlace: ['', Validators.required],
+      enlace: ['', Validators.required, urlValidator()],
 
 
 
@@ -112,6 +114,20 @@ export class ContactFormComponent {
           this.errorMessageEmail.set('');
         }
         break;
+
+
+      case 'enlace':
+        const enlaceControl = this.contactForm.get('enlace');
+        if(enlaceControl && enlaceControl.hasError('required')) {
+          this.errorMessageEmail.set('Tienes que ingresar un valor válido');
+        }else if (enlaceControl && enlaceControl.hasError('invalidUrl')) {
+          this.errorMessageToggle.set('No es un enlace válido');
+        }else {
+          this.errorMessageEmail.set('');
+        }
+        break;
+
+
       case 'metodoPago':
         const metodoPagoControl = this.contactForm.get('metodoPago');
         if (metodoPagoControl && metodoPagoControl.hasError('required')) {
