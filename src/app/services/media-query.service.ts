@@ -27,7 +27,11 @@ export class MediaQueryService {
   }
 
   triggerProcesses() {
-    if (this.breakpointObserver.isMatched(Breakpoints.Large)) {
+    if (this.breakpointObserver.isMatched(Breakpoints.XLarge)) {
+      this.currentBreakpoint = Breakpoints.XLarge;
+      this.nameBreakpoint = 'XLarge';
+      this.widths = ['1600px', '1800px', '2000px']; // Ejemplo de widths para XLarge
+    }else if (this.breakpointObserver.isMatched(Breakpoints.Large)) {
       this.currentBreakpoint = Breakpoints.Large;
       this.nameBreakpoint = 'Large';
       this.widths = ['1200px', '1400px', '1600px']; // Ejemplo de widths para Large

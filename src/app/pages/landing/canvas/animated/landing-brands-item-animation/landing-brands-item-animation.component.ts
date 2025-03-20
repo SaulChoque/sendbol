@@ -56,6 +56,10 @@ export class LandingBrandsItemAnimationComponent {
     //CMMT flagSizes[1]: CELULAR
 
     switch(this.currentBreakpoint){
+      case Breakpoints.XLarge:
+        this.changeSizesPC();
+        break;
+
       case Breakpoints.Large:
         this.changeSizesPC();
         break;

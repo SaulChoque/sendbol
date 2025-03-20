@@ -58,6 +58,13 @@ export class LandingFlagsItemAnimationComponent {
     //CMMT flagSizes[1]: CELULAR
 
     switch(this.currentBreakpoint){
+      
+      case Breakpoints.XLarge:
+        this.currentSizes = this.flagsizes[0];
+        this.currentVariablesUSA = "aos-usaFlag-pc";
+        this.currentVariablesBOL = "aos-bolFlag-pc";
+        this.currentVariablesSYNC = "sync-pc";
+        break;
       case Breakpoints.Large:
         this.currentSizes = this.flagsizes[0];
         this.currentVariablesUSA = "aos-usaFlag-pc";
