@@ -4,9 +4,10 @@ import { provideRouter, withViewTransitions } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideAnimations } from '@angular/platform-browser/animations';
+
 import { MediaQueryService } from './services/media-query.service';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideAnimations } from '@angular/platform-browser/animations';
 
 
 

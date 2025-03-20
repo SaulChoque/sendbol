@@ -4,6 +4,13 @@
 :host {
   position: relative;
 }
+
+app-landing-welcome-item-animation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 .body-landing{
 
   padding: 1em;
